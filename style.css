@@ -56,3 +56,14 @@
             .nav > li > a {
                 color:#fff;
             }
+
+            .intro_text{
+                width:100%;
+                margin:231px auto 231px auto;
+                text-align: center;
+            }
+
+            .intro_text > h1,
+            .intro_text > h4{
+                color:#fff;
+            }
