@@ -78,6 +78,7 @@
                     padding: 8px 24px;
                 }
                 .navbar__menu {
+                    display: none;
                     flex-direction: column;
                     align-items: center;
                     width: 100%;
@@ -87,11 +88,17 @@
                     text-align: center;
                 }
                 .navbar__icons{
+                    display: none;
                     justify-content: center;
                     width: 100%;
                 }
 
                 .navbar__toogleBtn{
                     display: block;
+                }
+
+                .navbar__menu.active,
+                .navbar__icons.active{
+                    display: flex;
                 }
             }
