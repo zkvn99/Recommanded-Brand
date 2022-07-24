@@ -58,6 +58,10 @@
                 text-decoration: none;
             }
 
+            .navbar {
+                text-decoration: none;
+            }
+
             .intro_text{
                 width:100%;
                 margin:231px auto 231px auto;
