@@ -1,0 +1,5 @@
+네이버 api Client ID : XNe9zM4h_SAXnhfS9Lyb
+Secret : YxLAeaAKjT
+
+네이버 쇼핑 api : qRwdjZHOncJCk8G9M47s
+keB5ApqYuI
