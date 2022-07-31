@@ -1,54 +1,26 @@
 <!DOCTYPE html>
-<html lang="kr">
+<html lang="ko">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 </head>
+
 <body>
-    callback 처리 callback 처리하고 바로 main 화면으로 redirect 함. 이 메세지가 보이면 안됨.
-
-    <!-- LoginWithNaverId javascript SDK -->
-    <script type="text/javascript" src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.0.js" charset="utf-8"></script>
-
-    <!-- LoginWithNaverId javascript 설정 정보 및 초기화 -->
-    <script>
-        var naverLogin = new naver.LoginWithNaverId(
-            {
-                clientId: "XNe9zM4h_SAXnhfS9Lyb",
-                callbackUrl: "http://127.0.0.1:5500/naver_login.html",
-                isPopup: false,
-                callbackHandle: true
-            }
-        );
-
-        /* 네이버 아이디로 로그인 정보를 초기화하기 위하여 init를 호출 */
-        naverLogin.init();
-
-        /* Callback의 처리, 정상적으로 Callback 처리가 완료될 경우 main page로 redirect(또는 Popup close) */
-        window.addEventListener('load', function (){
-            naverLogin.getLoginStatus(function (status){
-                if(status){
-                    /* 필수적으로 받아야하는 프로필 정보가 있다면 callback 처리 시점에 체크 */
-                    var email = naverLogin.user.getEmail();
-                    alert(email);
-                    console.log(naverLogin.user);
-                    if(email == undefined || email == null){ /* 이메일이 undefined 혹은 null 일경우 메세지 출력 */
-                        alert("이메일은 필수정보입니다. 정보제공을 동의해주세요.");
-                        /* 사용자 정보 재동의를 위하여 다시 네이버아이디로그인 동의 페이지로 이동함 */
-                        naverLogin.reprompt();
-                        return;
-                    }
-
-                    //window.location.replace("http://" + window.location.hostname + ( (location.port==""||location.port==undefined)?"":":" + location.port) + "/sample/main.html");
-                } else{
-                    console.log("callback 처리에 실패하였습니다.");
-                }
-            });
-        });
-
-        //https://nid.naver.com/oauth2.0/token?grant_type=delete&client_id=XNe9zM4h_SAXnhfS9Lyb&client_secret=YxLAeaAKjT&access_token=AAAAODJTVAJ9V0ilK2WqSjILD3c2RQExU6TQpz6wSOb0kKK8TE8PHrmmfBcspxyx6RRm-KyJ4pHg87DUiKuDgoIkBYs&service_provider=NAVER
+    <script type="text/javascript">
+        var naver_id_login = new naver_id_login("XNe9zM4h_SAXnhfS9Lyb", "http://127.0.0.1:5500/naver_callback.html");
+        // 접근 토큰 값 출력
+        alert(naver_id_login.oauthParams.access_token);
+        // 네이버 사용자 프로필 조회
+        naver_id_login.get_naver_userprofile("naverSignInCallback()");
+        // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
+        function naverSignInCallback() {
+            alert(naver_id_login.getProfileData('email'));
+            alert(naver_id_login.getProfileData('nickname'));
+            alert(naver_id_login.getProfileData('age'));
+        }
+        //https://nid.naver.com/oauth2.0/token?grant_type=delete&client_id=XNe9zM4h_SAXnhfS9Lyb&client_secret=YxLAeaAKjT&access_token=AAAAObMgn7sT3PhKfClhOHsXD7-T9_bDeKQxUiPN72qb3KoXRR8fs06Esq73DL_8IMJEVNHVzliOQWo7sGrLA9BFguU&service_provider=NAVER
     </script>
 </body>
+
 </html>
