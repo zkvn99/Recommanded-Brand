@@ -16,16 +16,17 @@
                 color: white;
             }
             .navbar {
-                justify-content: space-between;
+                display: flex;
+                justify-content: space-around;
                 align-items: center;
-                background-color: #fffffffb;
+                background-color: red;
                 padding: 8px 12px;
             }
 
             .navbar__logo {
                 display: flex;
                 font-size: 24px;
-                color: while;
+                background-color: blue;
             }
 
             .navbar__logo a {
@@ -79,10 +80,13 @@
             }
 
             .intro_bg{
+                height: 100vh;
+                width: 100vw;
                 background-image:url("image/intro.png");
-                width:100%;
-                height:718px;
+                background-size: cover;
+                background-repeat: no-repeat;
             }
+
             @media screen and (max-width: 768px) {
                 .navbar {
                     flex-direction: column;
@@ -99,18 +103,13 @@
                     width: 100%;
                     text-align: center;
                 }
-                .navbar__icons{
-                    display: none;
-                    justify-content: center;
-                    width: 100%;
-                }
 
                 .navbar__toogleBtn{
                     display: block;
+                    background-color: blue;
                 }
 
-                .navbar__menu.active,
-                .navbar__icons.active{
+                .navbar__menu.active{
                     display: flex;
                 }
             }
