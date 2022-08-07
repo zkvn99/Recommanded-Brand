@@ -15,6 +15,28 @@
                 text-decoration: none;
                 color: white;
             }
+            .header {
+                display: flex;
+                text-align: center;
+                background-color: black;
+            }
+            .head_name{
+                width:400px;
+                margin:auto;
+                background-color: blueviolet;
+            }
+
+            .head__toogleBtn {
+                display: none;
+                position: absolute;
+                right: 32px;
+                font-size: 24px;
+            }
+
+            .head__toogleBtn i {
+                color: white;
+            }
+
             .navbar {
                 display: flex;
                 justify-content: space-around;
@@ -24,7 +46,7 @@
             }
 
             .navbar__logo {
-                display: flex;
+                display: none;
                 font-size: 24px;
                 background-color: blue;
             }
@@ -80,18 +102,56 @@
             }
 
             .intro_bg{
+                display:flex;
                 height: 100vh;
                 width: 100vw;
+                margin: 0;
+                padding: 0;
+                border: 0;
                 background-image:url("image/intro.png");
                 background-size: cover;
                 background-repeat: no-repeat;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .intro_shop{
+                display: flex;
+                left: 300px;
+                top: 50px;
+                border: 2px solid;
+                color: white;
+                width: 200px;
+                height: 100px;
+                align-items: center;
+                justify-content: center;
+            }
+            .shop_list a{
+                text-align: center;
+                width: 100px;
+            }
+            .intro_item{
+                display: flex;
+                left: 300px;
+                top: 50px;
+                border: 2px solid;
+                color: white;
+                width: 200px;
+                height: 100px;
+                align-items: center;
+                justify-content: center;
             }
 
             @media screen and (max-width: 768px) {
+                .header{
+                    display: none;
+                }
                 .navbar {
                     flex-direction: column;
                     align-items: flex-start;
                     padding: 8px 24px;
+                }
+                .navbar__logo{
+                    display: flex;
                 }
                 .navbar__menu {
                     display: none;
@@ -112,4 +172,5 @@
                 .navbar__menu.active{
                     display: flex;
                 }
+
             }
