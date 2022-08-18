@@ -57,7 +57,7 @@
             }
 
             .navbar__menu{
-                display: flex;
+                display: flex;               
                 list-style: none;
                 padding-left: 0;
             }
@@ -75,33 +75,16 @@
                 text-decoration: none;
                 color: #000000;
             }
-            .navbar__icons {
-                list-style: none;
-                color: white;
-                display: flex;
-                padding-left: 0;
-            }
-            .navbar__icons i{
-                color: #000000;
-                line-height:55px;
-            }
 
-            .navbar__icons li{
-                padding: 8px 12px;
-            }
-
-            .navbar__toogleBtn {
+            .navbar__toogleBtn { /* 우측 상단 메뉴바 설정 */
                 display: none;
-                position: absolute;
+                position: fixed;
                 right: 32px;
                 font-size: 24px;
+                cursor: pointer;
             }
 
-            .navbar__toogleBtn i {
-                color: #000000;
-            }
-
-            .intro_bg{
+            .intro_bg{ /* intro 배경화면 설정 */
                 display:flex;
                 height: 100vh;
                 width: 100vw;
@@ -114,7 +97,7 @@
                 align-items: center;
                 justify-content: space-around;
             }
-            .intro_shop{
+            .intro_shop{ /* 화면에 shop 바로가기 버튼 */
                 display: flex;
                 left: 300px;
                 top: 50px;
@@ -125,11 +108,11 @@
                 align-items: center;
                 justify-content: center;
             }
-            .shop_list a{
+            .shop_list a{ /* 화면에 shop 바로가기 버튼 안에 문구 */
                 text-align: center;
                 width: 100px;
             }
-            .intro_item{
+            .intro_item{ /* 화면에 item 바로가기 버튼 */
                 display: flex;
                 left: 300px;
                 top: 50px;
@@ -139,6 +122,13 @@
                 height: 100px;
                 align-items: center;
                 justify-content: center;
+            }
+            .header_fixed {
+                position: fixed;
+                width: 100%;
+                top: 0px;
+                right: 0px;
+                left: 0px;
             }
 
             @media screen and (max-width: 768px) {
@@ -150,14 +140,14 @@
                     align-items: flex-start;
                     padding: 8px 24px;
                 }
-                .navbar__logo{
-                    display: flex;
-                }
                 .navbar__menu {
                     display: none;
                     flex-direction: column;
                     align-items: center;
                     width: 100%;
+                }
+                .navbar__logo{
+                    display: flex;
                 }
                 .navbar__menu li {
                     width: 100%;
@@ -171,6 +161,5 @@
 
                 .navbar__menu.active{
                     display: flex;
-                }
-
+                }               
             }
