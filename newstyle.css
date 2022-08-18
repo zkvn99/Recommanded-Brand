@@ -84,7 +84,7 @@
                 cursor: pointer;
             }
 
-            .intro_bg{ /* intro 배경화면 설정 */
+            .intro_bg{
                 display:flex;
                 height: 100vh;
                 width: 100vw;
