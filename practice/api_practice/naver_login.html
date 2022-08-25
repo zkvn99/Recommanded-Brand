@@ -14,10 +14,10 @@
     <div id="naver_id_login"></div>
     <!-- -------------------------------- -->
     <script type="text/javascript">
-        var naver_id_login = new naver_id_login("XNe9zM4h_SAXnhfS9Lyb", "http://127.0.0.1:5500/naver_callback.html");
+        var naver_id_login = new naver_id_login("XNe9zM4h_SAXnhfS9Lyb", "http://127.0.0.1:5500/api_practice/naver_callback.html");
         var state = naver_id_login.getUniqState();
         naver_id_login.setButton("white", 2, 40);
-        naver_id_login.setDomain("http://127.0.0.1:5500/naver_login.html");
+        naver_id_login.setDomain("http://127.0.0.1:5500/api_practice/naver_login.html");
         naver_id_login.setState(state);
         naver_id_login.setPopup();
         naver_id_login.init_naver_id_login();

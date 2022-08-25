@@ -1,0 +1,28 @@
+
+.container{
+   padding-top: 100px;
+   background: beige;
+   height: 100vh;
+   display: flex;
+ }
+ 
+ .item{
+   width: 40px;
+   height: 40px;
+   border: 1px solid black;
+ }
+ 
+ .item1 {
+   background: #ef9a9a;
+   order: 0;
+ }
+ 
+ .item2 {
+   background: #f48fb1;
+   order: 3;
+ }
+ 
+ .item3 {
+   background: #ce93d8;
+ }
+ 
