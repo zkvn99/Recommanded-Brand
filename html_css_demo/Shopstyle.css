@@ -1,0 +1,151 @@
+*{
+    margin:0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f3f7fa;
+}
+
+.ul{
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+.li{
+    display: list-item;
+    text-align: match-parent
+}
+.section{
+    display: block;
+}
+.wrapping{
+    position: relative;
+    margin: 0 auto;
+    padding-top: 60px;
+    max-width: 1174px;
+    height:100%;
+}
+.content_wrapper{
+    width: 100%;
+    min-height: calc(100vh - 220px);
+    float: left;
+}
+.main_container{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.contents{
+    float: left;
+}
+.shop_mall{
+    overflow: hidden;
+    float: left;
+    margin: 0 -3px;
+}
+.item_box{
+    width: 230px;
+    margin: 0 3px 6px;
+    overflow: hidden;
+    float: left;
+}
+.item_box a{
+    display: block;
+}
+.shop_card{
+    overflow: hidden;
+    float: left;
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    box-shadow: 0 1px 0 0 rgb(0 0 0 / 8%);
+    cursor: pointer;
+}
+.infor{
+    position: absolute;
+    left:50%;
+    transform: translate(-50%);
+    width: 100%;
+    top: 45px;
+    text-align: center;
+}
+.image img{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+    margin: 0 auto;
+}
+.img, .infor p{
+    overflow: hidden;
+}
+.infor p{
+    padding: 1px 0;
+    font-style: normal;
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.shop_name{
+    padding: 19px 0 15px;
+    color: black;
+    font-size: 15px;
+    overflow: hidden;
+    width: 85%;
+    margin: 0 auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1600px) {
+    .wrapping{
+        width:1174px;
+        height:100%;
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .wrapping{
+        width:938px;
+        height:100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapping{
+        width:702px;
+        height:100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .wrapping{
+        width: 100%;
+    }
+    .main_container{
+        width: 100%;
+    }
+    .content_wrapper{
+        width: 100%;
+    }
+    .contents{
+        width: 100%;
+        padding:0 6px;
+    }
+    .shop_mall{
+        width: 100%;
+    }
+    .item_box{
+        width: calc(33.33333% - 6px);
+    }
+}
+
+
+
