@@ -16,6 +16,7 @@
     <script src="main.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="fixed.js"></script>
+    <script src="search.js"></script>
 </head>
 
 <body>
@@ -40,6 +41,10 @@
     </nav>
 
     <div class="wrapping">
+        <div class="Search_container">
+            <h1>Search</h1>
+            <input onkeyup="filter()" type="text" id="value" placeholder="Type to Search">
+        </div>
         <section class="main_container">
             <div class="content_wrapper">
                 <div class="contents">

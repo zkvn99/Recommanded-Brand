@@ -32,14 +32,18 @@ body{
     max-width: 1174px;
     height:100%;
 }
-.content_wrapper{
-    width: 100%;
-    min-height: calc(100vh - 220px);
-    float: left;
+.Search_container{
+    width:70%;
+    margin: 10px auto;
 }
 .main_container{
     width: 100%;
     height: 100%;
+    float: left;
+}
+.content_wrapper{
+    width: 100%;
+    min-height: calc(100vh - 220px);
     float: left;
 }
 .contents{
@@ -102,6 +106,15 @@ body{
     margin: 0 auto;
     white-space: nowrap;
     text-overflow: ellipsis;
+}
+
+.Search_fixed {
+    position: fixed;
+    width: 50%;
+    top: 120px;
+    right: 0px;
+    left: 0px;
+    z-index: 1;
 }
 
 @media screen and (max-width: 1600px) {
