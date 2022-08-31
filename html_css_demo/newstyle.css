@@ -1,5 +1,5 @@
             *{
-                font-family: 'Poppins','Jua', sans-serif;
+                font-family: 'Poppins','Gugi', cursive;
                 list-style: none;
                 text-decoration: none;
                 border-collapse: collapse;
@@ -7,23 +7,28 @@
                 padding:0px;
                 color:#000;
             }
+            
             body {
                 margin: 0;
             }
             
             a{
                 text-decoration: none;
-                color: white;
+                color: black;
             }
             .header {
                 display: flex;
                 text-align: center;
-                background-color: black;
+                background-color: #CCD3D9;
             }
             .head_name{
-                width:400px;
+                width:350px;
                 margin:auto;
-                background-color: blueviolet;
+                background-color: #ffffff;
+                border-radius: 25px;
+            }
+            .head_name a{
+                color:black;
             }
 
             .head__toogleBtn {
@@ -41,14 +46,13 @@
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
-                background-color: red;
+                background-color: white;
                 padding: 8px 12px;
             }
 
             .navbar__logo {
                 display: none;
                 font-size: 24px;
-                background-color: blue;
             }
 
             .navbar__logo a {
@@ -67,13 +71,13 @@
             }
             
             .navbar__menu li:hover {
-                background-color: #d49946;
+                background-color: #CCD3D9;
                 border-radius: 4px;
             }
             
             .navbar__menu li a{
                 text-decoration: none;
-                color: #000000;
+                color: black;
             }
 
             .navbar__toogleBtn { /* 우측 상단 메뉴바 설정 */
@@ -95,8 +99,31 @@
                 justify-content: center;
                 flex-direction: column;
             } 
-            .intro_bg h1,h2{
-                color: green;
+            .intro_name{
+                width: 500px;
+                height: 200px;
+                display: flex;
+                line-height: 30px;
+                flex-direction: column;
+                background-color: rgba(255, 255, 255, 0.6);
+            }
+            @font-face {
+                font-family: 'SEBANG_Gothic_Bold';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2104@1.0/SEBANG_Gothic_Bold.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            .intro_name h1,h2{
+                margin-top: 15px;
+                text-align: center;
+                color: black;
+                opacity: 100%;
+            } 
+            .intro_name h3,h4{
+                font-family: 'SEBANG_Gothic_Bold';
+                font-size: 25px;
+                margin-top: 15px;
+                text-align: center;
             }
             .slide_section{
                 display:flex;
@@ -111,7 +138,8 @@
                 left: 300px;
                 top: 50px;
                 border: 2px solid;
-                color: white;
+                background-color: rgba(255, 255, 255, 0.6);
+                color: black;
                 width: 200px;
                 height: 100px;
                 align-items: center;
@@ -126,7 +154,8 @@
                 left: 300px;
                 top: 50px;
                 border: 2px solid;
-                color: white;
+                background-color: rgba(255, 255, 255, 0.6);
+                color: black;
                 width: 200px;
                 height: 100px;
                 align-items: center;
@@ -166,7 +195,6 @@
 
                 .navbar__toogleBtn{
                     display: block;
-                    background-color: blue;
                 }
 
                 .navbar__menu.active{
