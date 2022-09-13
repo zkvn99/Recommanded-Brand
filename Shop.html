@@ -7,15 +7,14 @@
     <script src="https://kit.fontawesome.com/ece3f9f87f.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="newstyle.css">
     <link rel="stylesheet" type="text/css" href="Shopstyle.css">
     <script src="main.js" defer></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="fixed.js"></script>
+    <script src="search.js"></script>
 </head>
 
 <body>
@@ -40,109 +39,455 @@
     </nav>
 
     <div class="wrapping">
+        <div class="Search_container">
+            <h1>Search</h1>
+            <input onkeyup="filter()" type="text" id="value" placeholder="브랜드 명">
+        </div>
         <section class="main_container">
-            <ul class="shop_mall">
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-                <aritcle class="shop_card card_set">
-                    <div class="infor">
-                        <div class="image">
-                            <img src="image/artifact.JPG">
-                        </div>
-                        <h2 class="shop_name">artifact</h2>
-                        <p>20대 30대</p>
-                    </div>
-                </aritcle>
-
-            </ul>
+            <div class="content_wrapper">
+                <div class="contents">
+                    <ul class="shop_mall">
+                        <li class="item_box">
+                            <a href="https://artifacts.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">Art if acts</h2>
+                                        <p>20대 30대</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://belier.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">BELIER</h2>
+                                        <p>20대 30대</p>
+                                        <p>컨템포러리</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://tonywack.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">Tonywack</h2>
+                                        <p>20대 30대</p>
+                                        <P>포멀</P>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://coor.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">coor</h2>
+                                        <p>20대 30대</p>
+                                        <p>미니멀</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://insilence.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">INSILENCE</h2>
+                                        <p>20대 30대</p>
+                                        <p>미니멀</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://stuoffice.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">STU OFFICE</h2>
+                                        <p>20대 30대</p>
+                                        <P>미니멀</P>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://adererror.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">ADER ERROR</h2>
+                                        <p>20대 30대</p>
+                                        <P>스트릿</P>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://draw-fit.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">DRAW FIT</h2>
+                                        <p>20대 30대</p>
+                                        <P>포멀</P>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://www.ilcorso-official.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">ILCORSO</h2>
+                                        <p>20대 30대</p>
+                                        <P>컨템포러리</P>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://beslow.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">BESLOW</h2>
+                                        <p>20대 30대</p>
+                                        <P>아메카지</P>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://www.covernat.net/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">COVERNAT</h2>
+                                        <p>10대 20대</p>
+                                        <P>캐주얼</P>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://noirer.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">noirer</h2>
+                                        <p>20대 30대</p>
+                                        <p>미니멀</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://yeseyesee.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">YESEYESEE</h2>
+                                        <p>20대 30대</p>
+                                        <p>스트릿</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://www.juunj.com/main.jsp" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">JUUN.J</h2>
+                                        <p>20대 30대</p>
+                                        <p>스트릿</p>
+                                        <p>하이엔드</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://www.uniformbridge.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">Uniform Bridge</h2>
+                                        <p>20대 30대</p>
+                                        <p>아메카지</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://en.frizm.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">FrizmWORKS</h2>
+                                        <p>20대 30대</p>
+                                        <p>아메카지</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://www.espionage.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">ESPIONAGE</h2>
+                                        <p>20대 30대</p>
+                                        <p>아메카지</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://lmood.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">LMOOD</h2>
+                                        <p>20대 30대</p>
+                                        <p>컨템포러리</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://en.sur8ery.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">SURGERY</h2>
+                                        <p>20대 30대</p>
+                                        <p>스트릿</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://lafudgestore.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">LAFUDGE STORE</h2>
+                                        <p>20대 30대</p>
+                                        <p>캐주얼</p>
+                                        <p>가성비</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://www.jemutshop.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">Jemut</h2>
+                                        <p>20대 30대</p>
+                                        <p>캐주얼</p>
+                                        <p>가성비</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://bants.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">BANTS</h2>
+                                        <p>20대 30대</p>
+                                        <p>포멀</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://brownyard.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">BROWNYARD</h2>
+                                        <p>20대 30대</p>
+                                        <p>미니멀</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://thisisneverthat.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">thisisneverthat</h2>
+                                        <p>10대 20대</p>
+                                        <p>스트릿</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://anderssonbell.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">Andersson Bell</h2>
+                                        <p>20대 30대</p>
+                                        <p>스트릿</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://youth-lab.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">youth</h2>
+                                        <p>20대 30대</p>
+                                        <p>미니멀</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://www.ptry.co.kr/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">POTTERY</h2>
+                                        <p>20대 30대</p>
+                                        <p>포멀</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://horlisun.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">Horlisun</h2>
+                                        <p>20대 30대</p>
+                                        <p>아메카지</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://heritagefloss.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">HERITAGEFLOSS</h2>
+                                        <p>20대 30대</p>
+                                        <p>캐주얼</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="http://solidhomme.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">SOLID HOMME</h2>
+                                        <p>20대 30대</p>
+                                        <p>컨템포러리</p>
+                                        <p>하이엔드</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                        <li class="item_box">
+                            <a href="https://wooyoungmi.com/" target="_blank">
+                                <aritcle class="shop_card">
+                                    <div class="infor">
+                                        <div class="image">
+                                            <img src="image/artifact.JPG">
+                                        </div>
+                                        <h2 class="shop_name">WOOYOUNGMI</h2>
+                                        <p>20대 30대</p>
+                                        <p>컨템포러리,스트릿</p>
+                                        <p>하이엔드</p>
+                                    </div>
+                                </aritcle>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </section>
     </div>
 </body>
