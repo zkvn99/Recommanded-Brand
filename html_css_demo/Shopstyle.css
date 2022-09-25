@@ -2,6 +2,12 @@
     margin:0px;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 body{
     background-color: #f3f7fa;
@@ -25,6 +31,26 @@ body{
 .section{
     display: block;
 }
+#top_button{
+    display: none;
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    right: 30px;
+    bottom: 50px;
+    outline: 0;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: white;
+    text-align: center;
+    box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 20%);
+}
+.top_button i{
+    padding: 7px;
+    border-width: 0 4px 4px 0;
+    vertical-align: middle;
+}
 .wrapping{
     position: relative;
     margin: 0 auto;
@@ -32,20 +58,46 @@ body{
     max-width: 1174px;
     height:100%;
 }
+.indicator{
+    position: fixed;
+    bottom: 510px;
+    z-index: 2;
+    background-color: white;
+    display: none;
+}
+.indicator.active{
+    display: block;
+}
 .Search_container{
-    width:70%;
+    width: 100%;
     height: 100px;
-    margin: 10px auto;
+}
+.category_box{
+    display: block;
+    width: 150px;
+    background-color: white;
+    border-radius: 1px;
+    float: left;
+    cursor: pointer;
+    margin-top: 30px;
+    text-align: center;
+}
+.category_box span{
+    font-size: 18px;
+    font-family: 'GmarketSansMedium';
 }
 .search_box{
+    display: block;
     position: relative;
-    right: -600px;
     width: 60px;
     height: 60px;
+    float: right;
+    margin-top: 10px;
     transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .search_box.active{
     width: 350px;
+    float: right;
 }
 .search_box input{
     font-size: 18px;
@@ -203,9 +255,6 @@ body{
     .main_container{
         max-width: 1174px;
     }
-    .search_box{
-        right: -560px;
-    }
 }
 
 @media screen and (max-width: 1450px) {
@@ -216,9 +265,6 @@ body{
     .main_container{
         max-width: 938px;
     }
-    .search_box{
-        right: -400px;
-    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -228,9 +274,6 @@ body{
     }
     .main_container{
         max-width: 702px;
-    }
-    .search_box{
-        right: -220px;
     }
 }
 
@@ -253,9 +296,6 @@ body{
     }
     .item_box{
         width: calc(33.33333% - 6px);
-    }
-    .search_box{
-        right: 0px;
     }
 }
 

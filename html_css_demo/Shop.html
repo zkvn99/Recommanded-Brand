@@ -37,9 +37,25 @@
             <li><a href="#">ITEM</a></li>
         </ul>
     </nav>
-
+    <button id="top_button">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
     <div class="wrapping">
+        <ul class="indicator">
+            <li data-filter="all" class="active"><a href="#">All</a></li>
+            <li data-filter="formal"><a href="#">formal</a></li>
+            <li data-filter="contemporary"><a href="#">contemporary</a></li>
+            <li data-filter="minimal"><a href="#">minimal</a></li>
+            <li data-filter="street"><a href="#">street</a></li>
+            <li data-filter="amekaji"><a href="#">amekaji</a></li>
+            <li data-filter="casual"><a href="#">casual</a></li>
+        </ul>
         <div class="Search_container">
+            <section class="category_box">
+                <span>
+                    브랜드 카테고리
+                </span>   
+            </section>
             <div class="search_box">
                 <input onkeyup="filter()" type="text" id="value" placeholder="브랜드 명">
                 <div class="searchBtn">
@@ -56,7 +72,7 @@
         <div class="content_wrapper">
             <div class="contents">
                 <ul class="shop_mall">
-                    <li class="item_box">
+                    <li class="item_box" data-category="formal">
                         <a href="https://artifacts.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -70,7 +86,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="contemporary">
                         <a href="http://belier.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -84,7 +100,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="formal">
                         <a href="https://tonywack.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -98,7 +114,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="minimal">
                         <a href="https://coor.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -112,7 +128,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="minimal">
                         <a href="http://insilence.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -126,7 +142,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="minimal">
                         <a href="https://stuoffice.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -140,7 +156,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="street">
                         <a href="https://adererror.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -154,7 +170,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="formal">
                         <a href="http://draw-fit.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -168,7 +184,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="contemporary">
                         <a href="https://www.ilcorso-official.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -182,7 +198,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="amekaji">
                         <a href="https://beslow.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -196,7 +212,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="casual">
                         <a href="https://www.covernat.net/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -210,7 +226,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="minimal">
                         <a href="https://noirer.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -224,7 +240,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="street">
                         <a href="https://yeseyesee.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -238,7 +254,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="street">
                         <a href="http://www.juunj.com/main.jsp" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -253,7 +269,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="amekaji">
                         <a href="http://www.uniformbridge.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -267,7 +283,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="amekaji">
                         <a href="https://en.frizm.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -281,7 +297,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="amekaji">
                         <a href="http://www.espionage.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -295,7 +311,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="contemporary">
                         <a href="https://lmood.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -309,7 +325,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="street">
                         <a href="http://en.sur8ery.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -323,7 +339,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="casual">
                         <a href="https://lafudgestore.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -338,7 +354,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="casual">
                         <a href="https://www.jemutshop.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -353,7 +369,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="formal">
                         <a href="http://bants.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -367,7 +383,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="minimal">
                         <a href="http://brownyard.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -381,7 +397,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="street">
                         <a href="https://thisisneverthat.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -395,7 +411,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="street">
                         <a href="https://anderssonbell.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -409,7 +425,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="minimal">
                         <a href="http://youth-lab.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -423,7 +439,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="formal">
                         <a href="https://www.ptry.co.kr/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -437,7 +453,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="casual">
                         <a href="https://horlisun.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -465,7 +481,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="contemporary">
                         <a href="http://solidhomme.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -480,7 +496,7 @@
                             </aritcle>
                         </a>
                     </li>
-                    <li class="item_box">
+                    <li class="item_box" data-category="contemporary">
                         <a href="https://wooyoungmi.com/" target="_blank">
                             <aritcle class="shop_card">
                                 <div class="infor">
@@ -496,10 +512,13 @@
                         </a>
                     </li>
                 </ul>
+                <script src="category.js"></script>
             </div>
         </div>
     </section>
     </div>
+    <script src="top_button.js"></script>
+    <script src="categoryevent.js"></script>
 </body>
 
 </html>
