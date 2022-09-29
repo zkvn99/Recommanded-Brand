@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ece3f9f87f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Home_style.css">
+    <link rel="stylesheet" type="text/css" href="Sale_style.css">
+    <script src="main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="fixed.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="head_name">
+            <a href="newhome.html">나만 알고 싶은 브랜드</a>
+        </h1>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="#">나만 알고 싶은 브랜드</a>
+            <a href="javascript:void(0);" class="navbar__toogleBtn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="Shop.html">SHOP</a></li>
+            <li><a href="Sale.html">SALE</a></li>
+            <li><a href="">ITEM</a></li>
+        </ul>
+
+    </nav>
+
+    <div class="content_wrapper_sale">
+        <section class="main_container_sale">
+            <div class="content_wrapper">
+                <div class="top_filters">
+                    <div class="input_wrapper">
+                        <input onkeyup="filter()" type="text" id="value" placeholder="세일 검색">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="search_activity.js"></script>
+    <button id="top_button">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+</body>
+
+</html>
