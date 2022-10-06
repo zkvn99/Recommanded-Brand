@@ -1,3 +1,18 @@
+            @font-face {
+                font-family: 'HallymGothic-Regular';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2') format('woff2');
+                font-weight: 400;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: 'ONE-Mobile-POP';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/ONE-Mobile-POP.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }
+            body {
+                background-color: #f3f7fa;
+            }
             section{
                 display: block;
             }
@@ -24,6 +39,7 @@
             .content_wrapper_sale{
                 display: block;
                 margin: 0 auto;
+                width: 1052px;
             }
             .main_container_sale{
                 display: block;
@@ -31,11 +47,10 @@
             }
             .content_wrapper{
                 width: 100%;
-                height: 100vh;
             }
             .top_filters{
                 position: sticky;
-                top: 60px;
+                top: 57px;
                 height: 160px;
                 padding-top: 40px;
                 z-index: 10;
@@ -65,15 +80,28 @@
                 height: 32px;
                 background-color: #ebeef0;
                 line-height: 32px;
-                text-indent: 10px;
                 cursor: pointer;
                 text-indent:40px;
                 font: inherit;
                 color: inherit;
             }
+            input::placeholder{
+                color: gray;
+            }
+            .input_wrapper.active input::placeholder{
+                color: #CCD3D9;
+                text-align: start;
+            }
+            .input_wrapper.active::before{
+                display: none;
+                content: none;
+            }
             .input_wrapper.active input{
-                background-color: blue;
-                color: #fff;
+                background-color: #CCD3D9;
+                color: black;
+                text-indent:6px;
+                font-family: 'HallymGothic-Regular';
+                font-size: 13px;
             }
             .item_list{
                 overflow: hidden;
@@ -107,38 +135,56 @@
                 left: 0;
                 display: block;
                 width: 100%;
+                height: 470px;
             }
             .sale_text_box{
                 display: block;
                 position: absolute;
                 right: 0;
                 bottom: 0;
-                background-color: gray;
+                background-color: #e5ecf3;
             }
             .sale_text{
-                font-family: DINPro_B;
+                position: relative;
+                font-family: 'ONE-Mobile-POP';
                 font-size: 36px;
                 text-align: center;
                 line-height: 65px;
                 padding: 0 21px;
+                opacity: 0.8;
                 display: block;
             }
-            .sale-text::after {
+            .sale_text::after {
                 content: "%";
-                font-family: DINPro_B;
+                font-family: 'ONE-Mobile-POP';
                 font-size: 18px;
                 position: absolute;
-                top: 18px;
+                top: 28px;
                 right: 5px;
                 line-height: 100%;
                 opacity: 0.5;
+                color: rgb(0, 0, 0);
             }
             .info{
+                font-family: 'ONE-Mobile-POP';
                 position: relative;
                 padding: 15px 14px;
-                background-color: black;
+                background-color: white;
                 font-size: 12px;
-                color: gray;
+                text-align: center;
+            }
+            .title{
+                font-family: 'ONE-Mobile-POP';
+                font-size: 15px;
+                color: #000000;
+            }
+            .term{
+                font-family: 'HallymGothic-Regular';
+            }
+            .shop{
+                font-family: 'HallymGothic-Regular';
+                padding: 14px 0 0 0;
+                font-weight: 900;
             }
 
             @media screen and (max-width: 1900px) {
@@ -170,6 +216,10 @@
                 }
                 .item_list>li{
                     margin-right: 0;
+                }
+                .top_filters{
+                    top: 50px;
+                    height: 80px;
                 }
             }
 
