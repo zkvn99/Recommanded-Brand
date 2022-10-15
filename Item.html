@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ece3f9f87f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Home_style.css">
+    <link rel="stylesheet" type="text/css" href="Item_style.css">
+    <script src="main.js" defer></script>
+    <script src="fixed.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <h1 class="head_name"><a href="Home.html">나만 알고 싶은 브랜드</a></h1>
+    </div>
+
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="Home.html">나만 알고 싶은 브랜드</a>
+            <a href="javascript:void(0);" class="navbar__toogleBtn">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li><a href="Home.html">HOME</a></li>
+            <li><a href="Shop.html">SHOP</a></li>
+            <li><a href="Sale.html">SALE</a></li>
+            <li><a href="Item.html">ITEM</a></li>
+        </ul>
+    </nav>
+    <button id="top_button">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+    <div id="layout_item"> <!-- 전체 레이아웃 -->
+        <section class="layout_container"> <!-- 전체 컨테이너 -->
+            <div class="layout_content_wrapper"> <!-- 컨텐츠 랩퍼 -->
+                <section class="container"> <!-- 컨텐츠 컨테이너 내용 들어갈 곳 -->
+                    <section class="main_container"> <!-- 메인 컨테이너 -->
+                        <div class="content_wrapper"> <!-- 메인 컨텐츠 랩퍼 -->
+                            <section calss="item_container">
+                                <div class="top_filters"> <!-- 위에 넣을 부분-->
+                                    <div class="filter_box">
+                                        <section class="category_container">
+                                            <ul class="indicator">
+                                                스타일 카테고리
+                                                <li data-filter="all" class="active"><a href="#">전체</a></li>
+                                                <li data-filter="formal"><a href="#">포멀</a></li>
+                                                <li data-filter="contemporary"><a href="#">컨템포러리</a></li>
+                                                <li data-filter="minimal"><a href="#">미니멀</a></li>
+                                                <li data-filter="street"><a href="#">스트릿</a></li>
+                                                <li data-filter="amekaji"><a href="#">아메카지</a></li>
+                                                <li data-filter="casual"><a href="#">캐주얼</a></li>
+                                            </ul>
+                                            <section class="category_box">
+                                                <span>       
+                                                    스타일 카테고리
+                                                </span>   
+                                            </section>
+                                        </section><!-- 카테고리 기능 구현-->
+                                        <div class="search_filter"></div> <!-- 검색 기능 구현-->
+                                        <section class="price_container"></section>
+                                    </div>
+                                    <div class="mobile_filter"></div>
+                                </div>
+                                <div class="item_content_wrapper"> <!-- 아이템들 들어갈 곳 랩핑-->
+                                    <div class="item_content_grid"> <!-- 아이템 넣을 전체 격자모양-->
+                                        <div class="item_card_grid"> <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured"> <!-- 아이템 사진 넣는 부분-->
+                                                <a href="#">
+                                                    <div class="img_item"> <!--첫번째 사진 안에다가 img src 넣을 예정-->
+
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                    <div class="img_item_secondary"></div> <!--두번째 사진 안에다가 img src 넣을 예정-->
+                                                </a>
+                                                <div class="img_relevant">new or hit or best seller</div>
+                                            </div>
+                                            <div class="item_card_content"> <!-- 아이템 사진 설명 부분-->
+                                        
+                                            </div>
+                                            <div class="item_color_brand"> <!-- 아이템 컬러 및 브랜드 설명-->
+
+                                            </div>
+                                        </div>
+                                        <div class="item_card_grid"></div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </section>
+                </section>
+            </div>
+        </section>
+    </div>
+    <script src="top_button.js"></script>
+</body>
+
+</html>
