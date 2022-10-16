@@ -38,54 +38,98 @@
     <button id="top_button">
         <i class="fa-solid fa-chevron-up"></i>
     </button>
-    <div id="layout_item"> <!-- 전체 레이아웃 -->
-        <section class="layout_container"> <!-- 전체 컨테이너 -->
-            <div class="layout_content_wrapper"> <!-- 컨텐츠 랩퍼 -->
-                <section class="container"> <!-- 컨텐츠 컨테이너 내용 들어갈 곳 -->
-                    <section class="main_container"> <!-- 메인 컨테이너 -->
-                        <div class="content_wrapper"> <!-- 메인 컨텐츠 랩퍼 -->
+    <div id="layout_item">
+        <!-- 전체 레이아웃 -->
+        <section class="layout_container">
+            <!-- 전체 컨테이너 -->
+            <div class="layout_content_wrapper">
+                <!-- 컨텐츠 랩퍼 -->
+                <section class="container">
+                    <!-- 컨텐츠 컨테이너 내용 들어갈 곳 -->
+                    <section class="main_container">
+                        <!-- 메인 컨테이너 -->
+                        <div class="content_wrapper">
+                            <!-- 메인 컨텐츠 랩퍼 -->
                             <section calss="item_container">
-                                <div class="top_filters"> <!-- 위에 넣을 부분-->
+                                <div class="top_filters">
+                                    <!-- 위에 넣을 부분-->
                                     <div class="filter_box">
                                         <section class="category_container">
                                             <ul class="indicator">
                                                 스타일 카테고리
                                                 <li data-filter="all" class="active"><a href="#">전체</a></li>
-                                                <li data-filter="formal"><a href="#">포멀</a></li>
-                                                <li data-filter="contemporary"><a href="#">컨템포러리</a></li>
-                                                <li data-filter="minimal"><a href="#">미니멀</a></li>
-                                                <li data-filter="street"><a href="#">스트릿</a></li>
-                                                <li data-filter="amekaji"><a href="#">아메카지</a></li>
-                                                <li data-filter="casual"><a href="#">캐주얼</a></li>
+                                                <li data-filter="top"><a href="#">상의</a></li>
+                                                <li data-filter="bottom"><a href="#">하의</a></li>
+                                                <li data-filter="outer"><a href="#">아우터</a></li>
+                                                <li data-filter="shoes"><a href="#">신발</a></li>
                                             </ul>
                                             <section class="category_box">
-                                                <span>       
+                                                <span>
                                                     스타일 카테고리
-                                                </span>   
+                                                </span>
                                             </section>
                                         </section><!-- 카테고리 기능 구현-->
-                                        <div class="search_filter"></div> <!-- 검색 기능 구현-->
-                                        <section class="price_container"></section>
+                                        <div class="search_filter">
+                                            <input onkeyup="filter()" type="text" id="value" placeholder="아이템 검색">
+                                        </div> <!-- 검색 기능 구현-->
+                                        <section class="price_container">
+                                            <span> 가격대설정 </span>
+                                            <div class="wrapping_price">
+                                                <div class="input_price">
+                                                    <div class="field">
+                                                        <span>Min</span>
+                                                        <input type="number" class="input-min" value="2500">
+                                                    </div>
+                                                    <div class="separator">-</div>
+                                                    <div class="field">
+                                                        <span>Max</span>
+                                                        <input type="number" class="input-max" value="7500">
+                                                    </div>
+                                                </div>
+                                                <div class="slider">
+                                                    <div class="progress"></div>
+                                                </div>
+                                                <div class="range_input">
+                                                    <input type="range" class="range-min" min="0" max="10000"
+                                                        value="2500" step="100">
+                                                    <input type="range" class="range-max" min="0" max="10000"
+                                                        value="7500" step="100">
+                                                </div>
+                                            </div>
+                                        </section>
                                     </div>
                                     <div class="mobile_filter"></div>
                                 </div>
-                                <div class="item_content_wrapper"> <!-- 아이템들 들어갈 곳 랩핑-->
-                                    <div class="item_content_grid"> <!-- 아이템 넣을 전체 격자모양-->
-                                        <div class="item_card_grid"> <!-- 아이템 격자모양 -->
-                                            <div class="item_card_featured"> <!-- 아이템 사진 넣는 부분-->
+                                <div class="item_content_wrapper">
+                                    <!-- 아이템들 들어갈 곳 랩핑-->
+                                    <div class="item_content_grid">
+                                        <!-- 아이템 넣을 전체 격자모양-->
+                                        <div class="item_card_grid" data-category="top">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
                                                 <a href="#">
                                                     <div class="img_item"> <!--첫번째 사진 안에다가 img src 넣을 예정-->
-
+                                                       <img src="image/HERITAGEFLOSS.JPG" class="img__first">
                                                     </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
-                                                    <div class="img_item_secondary"></div> <!--두번째 사진 안에다가 img src 넣을 예정-->
+                                                    <div class="img_item_secondary"></div>
+                                                    <!--두번째 사진 안에다가 img src 넣을 예정-->
                                                 </a>
-                                                <div class="img_relevant">new or hit or best seller</div>
+                                                <div class="img_relevant">new</div>
                                             </div>
-                                            <div class="item_card_content"> <!-- 아이템 사진 설명 부분-->
-                                        
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">초록색 니트</p>
+                                                    <div class="item_card_price">
+                                                        <p> 120,000</p>
+                                                    </div>
+                                                </a>
                                             </div>
-                                            <div class="item_color_brand"> <!-- 아이템 컬러 및 브랜드 설명-->
-
+                                            <div class="item_color_brand">
+                                                <!-- 아이템 컬러 및 브랜드 설명-->
+                                                <p class="item_card_brand">무신사</p>
+                                                <p class="item_card_category_none">상의</p>
                                             </div>
                                         </div>
                                         <div class="item_card_grid"></div>
@@ -98,7 +142,10 @@
             </div>
         </section>
     </div>
+    <script src="category_activity.js"></script>
+    <script src="category_item.js"></script>
     <script src="top_button.js"></script>
+    <script src="Item_search.js"></script>
 </body>
 
 </html>

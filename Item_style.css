@@ -51,11 +51,19 @@
                 padding: 20px 0 0;
             }
             
-
+/* 카테고리 부분 -----------------------------*/
+            .category_container{
+                position: relative;
+                float: left;
+                z-index: 1;
+                min-width: 213px;
+                padding-right: 30px;
+                text-align: left;
+            }
             .indicator{
                 position: absolute;
-                width: 190px;
-                top: 90px;
+                width: 180px;
+                top: 30px;
                 z-index: 1;
                 background-color: rgb(255, 255, 255);
                 display: none;
@@ -122,9 +130,143 @@
             .category_box.active{
                 display: none;
             }
+/* 카테고리 부분 --------------------------- */
+/* 검색 부분 ------------------------------- */
+            .search_filter{
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+                margin: 20px auto 0;
+            }
+            .search_filter::before{
+                content: "";
+                display: block;
+                position: absolute;
+                background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAmZJREFUeNrEl79LI0EUx9d4TVIpCCdI1EI5hCvSiF3A1ApWEX+ANkpsErh/QK6zUZIUKoqgoIipRC2sIqYTC9NpYXEmCB5YXBVtFu478CIx5E3ePuP64MO6Oz/248zLzGxbOp12msR3EAcxEAFh0A5cUAZFkAc58NfxGKlU6t19wFK3D+yCR5AFE6CfZBy69tPzLNXbpXbq4IQS4BbM1Qg0i3aqf0vtWyJkOt0CGyCo7DNI7bc8/DNv8a3u3nS04LQmqv0sakco0UKZWqmERsgk4lqTuqdgGgyCTrpO03NbrHpJ9OqU/bbkzBOYBIW65//APTgEUXAEuhu0D1H/89IRMuvMrEVmpIFMfRSo3hNTPkvvEQnFLb8GMzIl4WiXqD63JMSlQjFLzhQ8JnHBklMxqVCEKTtU/rK4dhGpUJgpu1YKce3CUiEuf56VQs+WPBIJuUxZl1KIa+dKhcpM2bBSiGtXlgoVmbIppRDXrigVyjNl47QCe4kotWsUealQzjK/ZjvoFcr8AOeW/MlJhcyxc58pN3vTlWCkTPmNZT/clx5vq7v9MnixSF2CE8qPAdBB1yl6fmmRMaOz4nW3fwC/6IDmWHJqXJHkZv1ZB2Og4uWAtgm2nc+JUXBGRxFPZ+qlr5YKNJjvRRJ7Ub7Y/YgU9xlkpm8I7EmXfKpn6v8EF1op24fiAx07e0ASHIM/NYIu3R9TeQ/Vv6MEVkm1CT6ltRGil45a6hjpMXxOVyQj9NGoSEcqk8mE/BBSSX3mlKmmL+D4E9KRyvolJJWa8VNIJOW3UDOpg68QqpXaAa+E+Tv5X4ABAGhMjUB571HeAAAAAElFTkSuQmCC);
+                background-size: cover;
+                top: 12px;
+                left: 20px; 
+                width: 12px;
+                height: 12px;
+            }
+            .search_filter input{
+                font-size: 11px;
+                border: 1px solid;
+                width: 140px;
+                height: 32px;
+                background-color: #ebeef0;
+                line-height: 32px;
+                cursor: pointer;
+                text-indent:40px;
+                font: inherit;
+                color: inherit;
+            }
+            input::placeholder{
+                color: gray;
+            }
+            .search_filter.active input::placeholder{
+                color: #CCD3D9;
+                text-align: start;
+            }
+            .search_filter.active::before{
+                display: none;
+                content: none;
+            }
+            .search_filter.active input{
+                background-color: #ffffff;
+                color: black;
+                text-indent:6px;
+                font-family: 'HallymGothic-Regular';
+                font-size: 13px;
+            }
+/* 검색 부분 ------------------------------- */
+/* 가격 필터 부분 -------------------------- */
+            .price_container{
+                padding-top: 30px;
+                text-align: right;
+            }
+            .wrapping_price{
+                display: none;
+                width: 400px;
+                background-color: blue;
+                border-radius: 10px;
+                padding: 20px 25px 40px;
+                float: right;
+            }
+            .input_price{
+                width: 100%;
+                display: flex;
+                margin: 30px 0 35px;
+            }
+            .input_price .field{
+                height: 45px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+            }
+            .field input{
+                width: 100%;
+                height: 100%;
+                outline: none;
+                font-size: 19px;
+                text-align: center;
+                margin-left: 12px;
+                border-radius: 5px;
+                border: 1px solid #999;
+                -moz-appearance: textfield;
+            }
+            input[type="number"]::-webkit-outer-spin-button
+            input[type="number"]::-webkit-outer-spin-button{
+                -webkit-appearance: none;
+            }
+            .input_price .separator{
+                width: 130px;
+                display: flex;
+                font-size: 19px;
+                align-items: center;
+                justify-content: center;
+            }
+            .slider{
+                height: 5px;
+                border-radius: 5px;
+                background-color: black;
+            }
+            .slider .progress{
+                height: 5px;
+                left: 25%;
+                right: 25%;
+                position: absolute;
+                border-radius: 5px;
+            }
+            .range_input{
+                position: relative;
+            }
+            .range_input input{
+                position: absolute;
+                top: -5px;
+                height: 5px;
+                width: 100%;
+                background: none;
+                -webkit-appearance: none;
+            }
+            input[type="range"]::-webkit-slider-thumb{
+                height: 17px;
+                width: 17px;
+                border-radius: 50%;
+                -webkit-appearance: none;
+                background-color: aqua;
+            }
+            input[type="range"]::-moz-range-thumb{
+                height: 17px;
+                width: 17px;
+                border-radius: 50%;
+                pointer-events: auto;
+                -webkit-appearance: none;
+                background: aqua;
+            }
 
-
-
+/* 가격 필터 부분 -------------------------- */
+/* 위로가기 부분 --------------------------- */
             #top_button{
                 display: none;
                 position: fixed;
@@ -144,4 +286,45 @@
                 padding: 7px;
                 border-width: 0 4px 4px 0;
                 vertical-align: middle;
+            }
+/* 위로가기 부분 --------------------------- */
+/* 아이템 부분 ----------------------------- */
+            .item_content_wrapper{
+                min-width: 100%;
+                min-height: 100vh; 
+                display: grid;
+            }
+            .item_content_grid{
+                display: flex;
+                flex-wrap: wrap;
+                grid-column: 1 / span 2;
+
+                width: calc(100%);
+            }
+            .item_card_gird{
+                width: calc(25% - 20px);
+                position: relative;
+            }
+            .item_card_featured{
+                display: block;
+                padding-top:  133.55%;
+                position: relative;
+            }
+            .item_details_title{
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+            }
+            .item_details_title .item_card_details{
+                width: calc(100% - 80px);
+                margin: 16px 0 0;
+            }
+            .item_card_price{
+                width: 80px;
+                flex-direction: column;
+                text-align: right;
+                margin: 16px 0 10px;
+            }
+            .item_card_category_none{
+                display: none;
             }
