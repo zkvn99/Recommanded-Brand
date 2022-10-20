@@ -180,17 +180,50 @@
             }
 /* 검색 부분 ------------------------------- */
 /* 가격 필터 부분 -------------------------- */
+            .price_onclick{
+                position: absolute;
+                right: 5px;
+                top: 110px;
+                background-color: red;
+                width: 100px;
+                height: 30px;
+                text-align: center;
+            }
+            .price_onclick span{
+                font-size: 18px;
+                font-family: 'BMJUA';
+                line-height: 30px;
+                cursor: pointer;
+            }
+            .price_onclick.active{
+                display: none;
+            }
             .price_container{
+                display: none;
+                padding-top: 30px;
+                text-align: right;
+                background-color: blue;
+                float: right;
+            }
+            .price_container i{
+                width: 30px;
+                font-size: 25px;
+                position: absolute;
+                background-color: red;
+                cursor: pointer;
+                right: 15px;
+                top: 80px;
+            }
+            .price_container.active{
+                display: block;
                 padding-top: 30px;
                 text-align: right;
             }
             .wrapping_price{
-                display: none;
                 width: 400px;
                 background-color: blue;
                 border-radius: 10px;
                 padding: 20px 25px 40px;
-                float: right;
             }
             .input_price{
                 width: 100%;
@@ -214,8 +247,9 @@
                 border: 1px solid #999;
                 -moz-appearance: textfield;
             }
-            input[type="number"]::-webkit-outer-spin-button
-            input[type="number"]::-webkit-outer-spin-button{
+            
+            input[type="number"]::-webkit-outer-spin-button,
+            input[type="number"]::-webkit-inner-spin-button{
                 -webkit-appearance: none;
             }
             .input_price .separator{
@@ -225,10 +259,12 @@
                 align-items: center;
                 justify-content: center;
             }
+            /* 문제없음 */
             .slider{
                 height: 5px;
                 border-radius: 5px;
                 background-color: black;
+                position: relative;
             }
             .slider .progress{
                 height: 5px;
@@ -236,6 +272,8 @@
                 right: 25%;
                 position: absolute;
                 border-radius: 5px;
+                background-color: aqua;
+                min-width: 25px;
             }
             .range_input{
                 position: relative;
@@ -243,24 +281,28 @@
             .range_input input{
                 position: absolute;
                 top: -5px;
+                left: 0px;
                 height: 5px;
                 width: 100%;
                 background: none;
+                pointer-events: none;
                 -webkit-appearance: none;
             }
             input[type="range"]::-webkit-slider-thumb{
                 height: 17px;
                 width: 17px;
                 border-radius: 50%;
+                pointer-events: auto;
                 -webkit-appearance: none;
                 background-color: aqua;
             }
             input[type="range"]::-moz-range-thumb{
                 height: 17px;
                 width: 17px;
+                border: none;
                 border-radius: 50%;
                 pointer-events: auto;
-                -webkit-appearance: none;
+                -moz-appearance: none;
                 background: aqua;
             }
 
@@ -280,6 +322,7 @@
                 background-color: white;
                 text-align: center;
                 box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 20%);
+                z-index: 10;
             }
             .top_button i{
                 padding: 7px;

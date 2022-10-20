@@ -53,7 +53,6 @@
                 top: 57px;
                 height: 160px;
                 padding-top: 40px;
-                z-index: 10;
                 background-color: rgba(243,247,250,.97);
             }
             .input_wrapper{
@@ -237,6 +236,7 @@
                 background-color: white;
                 text-align: center;
                 box-shadow: 2px 2px 8px 0 rgb(0 0 0 / 20%);
+                z-index: 10;
             }
             .top_button i{
                 padding: 7px;
