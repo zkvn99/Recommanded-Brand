@@ -83,23 +83,24 @@
                                                     <i class="fas fa-times"></i>
                                                     <div class="field">
                                                         <span>Min</span>
-                                                        <input type="number" class="input-min" value="2500">
+                                                        <input type="number" id="input_min" class="input-min" id="input-min" value="0">
                                                     </div>
                                                     <div class="separator">-</div>
                                                     <div class="field">
                                                         <span>Max</span>
-                                                        <input type="number" class="input-max" value="7500">
+                                                        <input type="number" id="input_max" class="input-max" value="10000000">
                                                     </div>
                                                 </div>
                                                 <div class="slider">
                                                     <div class="progress"></div>
                                                 </div>
                                                 <div class="range_input">
-                                                    <input type="range" class="range-min" min="0" max="10000"
-                                                        value="2500" step="100">
-                                                    <input type="range" class="range-max" min="0" max="10000"
-                                                        value="7500" step="100">
+                                                    <input type="range" id= "range_min" class="range-min" min="0" max="10000000"
+                                                        value="0" step="1000">
+                                                    <input type="range" class="range-max" min="5000" max="10000000"
+                                                        value="1000000" step="1000">
                                                 </div>
+                                                <input type="button" value="적용" onclick="item_filter()">
                                             </div>
                                         </section>
                                     </div>
@@ -125,9 +126,10 @@
                                             <div class="item_card_content">
                                                 <!-- 아이템 사진 설명 부분-->
                                                 <a href="#" class="item_details_title">
-                                                    <p class="item_card_details">초록색 니트</p>
+                                                    <p class="item_card_details">초록색 니트50000</p>
                                                     <div class="item_card_price">
-                                                        <p> 120,000</p>
+                                                        <p>120,000</p>
+                                                        <input type="number" id="input_number" class="input-number" value="50000">
                                                     </div>
                                                 </a>
                                             </div>
@@ -153,9 +155,10 @@
                                             <div class="item_card_content">
                                                 <!-- 아이템 사진 설명 부분-->
                                                 <a href="#" class="item_details_title">
-                                                    <p class="item_card_details">초록색 니트</p>
-                                                    <div class="item_card_price">
-                                                        <p> 120,000</p>
+                                                    <p class="item_card_details">초록색 니트10000</p>
+                                                    <div class="item_card_price">   
+                                                        <p>120,000</p>
+                                                        <input type="number" id="input_number" class="input-number" value="10000">
                                                     </div>
                                                 </a>
                                             </div>
@@ -165,91 +168,7 @@
                                                 <p class="item_card_category_none">상의</p>
                                             </div>
                                         </div>
-                                        <div class="item_card_grid" data-category="top">
-                                            <!-- 아이템 격자모양 -->
-                                            <div class="item_card_featured">
-                                                <!-- 아이템 사진 넣는 부분-->
-                                                <a href="#">
-                                                    <div class="img_item"> <!--첫번째 사진 안에다가 img src 넣을 예정-->
-                                                       <img src="image/HERITAGEFLOSS.JPG" id="imgfirst">
-                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
-                                                    <div class="img_item_secondary"></div>
-                                                    <!--두번째 사진 안에다가 img src 넣을 예정-->
-                                                </a>
-                                                <div class="img_relevant">new</div>
-                                            </div>
-                                            <div class="item_card_content">
-                                                <!-- 아이템 사진 설명 부분-->
-                                                <a href="#" class="item_details_title">
-                                                    <p class="item_card_details">초록색 니트</p>
-                                                    <div class="item_card_price">
-                                                        <p> 120,000</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="item_color_brand">
-                                                <!-- 아이템 컬러 및 브랜드 설명-->
-                                                <p class="item_card_brand">무신사</p>
-                                                <p class="item_card_category_none">상의</p>
-                                            </div>
-                                        </div>
-                                        <div class="item_card_grid" data-category="top">
-                                            <!-- 아이템 격자모양 -->
-                                            <div class="item_card_featured">
-                                                <!-- 아이템 사진 넣는 부분-->
-                                                <a href="#">
-                                                    <div class="img_item"> <!--첫번째 사진 안에다가 img src 넣을 예정-->
-                                                       <img id="imgfirst" src="image/HERITAGEFLOSS.JPG">
-                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
-                                                    <div class="img_item_secondary"></div>
-                                                    <!--두번째 사진 안에다가 img src 넣을 예정-->
-                                                </a>
-                                                <div class="img_relevant">new</div>
-                                            </div>
-                                            <div class="item_card_content">
-                                                <!-- 아이템 사진 설명 부분-->
-                                                <a href="#" class="item_details_title">
-                                                    <p class="item_card_details">초록색 니트</p>
-                                                    <div class="item_card_price">
-                                                        <p> 120,000</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="item_color_brand">
-                                                <!-- 아이템 컬러 및 브랜드 설명-->
-                                                <p class="item_card_brand">무신사</p>
-                                                <p class="item_card_category_none">상의</p>
-                                            </div>
-                                        </div>
-                                        <div class="item_card_grid" data-category="top">
-                                            <!-- 아이템 격자모양 -->
-                                            <div class="item_card_featured">
-                                                <!-- 아이템 사진 넣는 부분-->
-                                                <a href="#">
-                                                    <div class="img_item"> <!--첫번째 사진 안에다가 img src 넣을 예정-->
-                                                        <img id="imgfirst" src="image/HERITAGEFLOSS.JPG">
-                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
-                                                    <div class="img_item_secondary">
-                                                    </div>
-                                                    <!--두번째 사진 안에다가 img src 넣을 예정-->
-                                                </a>
-                                                <div class="img_relevant">new</div>
-                                            </div>
-                                            <div class="item_card_content">
-                                                <!-- 아이템 사진 설명 부분-->
-                                                <a href="#" class="item_details_title">
-                                                    <p class="item_card_details">초록색 니트</p>
-                                                    <div class="item_card_price">
-                                                        <p> 120,000</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="item_color_brand">
-                                                <!-- 아이템 컬러 및 브랜드 설명-->
-                                                <p class="item_card_brand">무신사</p>
-                                                <p class="item_card_category_none">상의</p>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </section>
@@ -266,6 +185,7 @@
     <script src="top_button.js"></script>
     <script src="Item_search.js"></script>
     <script src="item_price_filter.js"></script>
+    <script src="item_price_array.js"></script>
 </body>
 
 </html>

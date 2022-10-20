@@ -15,7 +15,7 @@ priceInput.forEach(input =>{
                 progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
             }else{
                 rangeInput[1].value = maxVal;
-                progress.style.right = 100 - (minVal / rangeInput[1].max) * 100 + "%";
+                progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
             }
         }
     });
@@ -36,7 +36,7 @@ rangeInput.forEach(input =>{
             priceInput[0].value = minVal;
             priceInput[1].value = maxVal;
             progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
-            progress.style.right = 100 - (minVal / rangeInput[1].max) * 100 + "%";
+            progress.style.right = 100 - (maxVal / rangeInput[1].max) * 100 + "%";
         }
     });
 });

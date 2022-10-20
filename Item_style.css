@@ -200,10 +200,12 @@
             }
             .price_container{
                 display: none;
+                position: absolute;
                 padding-top: 30px;
                 text-align: right;
                 background-color: blue;
-                float: right;
+                right: 10px;
+                top: 100px;
             }
             .price_container i{
                 width: 30px;
@@ -212,7 +214,7 @@
                 background-color: red;
                 cursor: pointer;
                 right: 15px;
-                top: 80px;
+                top: 20px;
             }
             .price_container.active{
                 display: block;
@@ -268,12 +270,10 @@
             }
             .slider .progress{
                 height: 5px;
-                left: 25%;
-                right: 25%;
                 position: absolute;
                 border-radius: 5px;
                 background-color: aqua;
-                min-width: 25px;
+                min-width: 5px;
             }
             .range_input{
                 position: relative;
@@ -304,6 +304,11 @@
                 pointer-events: auto;
                 -moz-appearance: none;
                 background: aqua;
+            }
+            .price_filter_input{
+                width: 50px;
+                cursor: pointer;
+                float: right;
             }
 
 /* 가격 필터 부분 -------------------------- */
@@ -398,6 +403,10 @@
             .item_card_category_none{
                 display: none;
             }
+            .item_card_price input{
+                display: none;
+            }
+
             @media screen and (max-width: 1600px) {
 
             }
