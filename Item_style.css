@@ -49,8 +49,8 @@
             .filter_box{
                 padding: 20px 0 0;
             }
-            
-/* 카테고리 부분 -----------------------------*/
+
+            /* 카테고리 부분 -----------------------------*/
             .category_container{
                 position: relative;
                 float: left;
@@ -129,8 +129,8 @@
             .category_box.active{
                 display: none;
             }
-/* 카테고리 부분 --------------------------- */
-/* 검색 부분 ------------------------------- */
+            /* 카테고리 부분 --------------------------- */
+            /* 검색 부분 ------------------------------- */
             .search_filter{
                 position: absolute;
                 left: 50%;
@@ -178,8 +178,8 @@
                 font-family: 'HallymGothic-Regular';
                 font-size: 13px;
             }
-/* 검색 부분 ------------------------------- */
-/* 가격 필터 부분 -------------------------- */
+            /* 검색 부분 ------------------------------- */
+            /* 가격 필터 부분 -------------------------- */
             .price_onclick{
                 position: absolute;
                 right: 5px;
@@ -249,7 +249,7 @@
                 border: 1px solid #999;
                 -moz-appearance: textfield;
             }
-            
+
             input[type="number"]::-webkit-outer-spin-button,
             input[type="number"]::-webkit-inner-spin-button{
                 -webkit-appearance: none;
@@ -273,7 +273,8 @@
                 position: absolute;
                 border-radius: 5px;
                 background-color: aqua;
-                min-width: 5px;
+                left: 0px;
+                right: 0px;
             }
             .range_input{
                 position: relative;
@@ -311,8 +312,8 @@
                 float: right;
             }
 
-/* 가격 필터 부분 -------------------------- */
-/* 위로가기 부분 --------------------------- */
+            /* 가격 필터 부분 -------------------------- */
+            /* 위로가기 부분 --------------------------- */
             #top_button{
                 display: none;
                 position: fixed;
@@ -334,8 +335,8 @@
                 border-width: 0 4px 4px 0;
                 vertical-align: middle;
             }
-/* 위로가기 부분 --------------------------- */
-/* 아이템 부분 ----------------------------- */
+            /* 위로가기 부분 --------------------------- */
+            /* 아이템 부분 ----------------------------- */
             .item_content_wrapper{
                 min-width: 100%;
                 min-height: 100vh; 
@@ -385,6 +386,11 @@
                 color: inherit;
                 vertical-align: baseline;
             }
+            .item_card_content{
+                position: relative;
+                padding: 16px;
+                background-color: red;
+            }
             .item_details_title{
                 display: flex;
                 flex-direction: row;
@@ -400,6 +406,11 @@
                 text-align: right;
                 margin: 16px 0 10px;
             }
+            .item_brand{
+                float: left;
+                width: 100px;
+                padding-left: 20px;
+            }
             .item_card_category_none{
                 display: none;
             }
@@ -410,21 +421,21 @@
             @media screen and (max-width: 1600px) {
 
             }
-            
+
             @media screen and (max-width: 1450px) {
 
             }
-            
+
             @media screen and (max-width: 1024px) {
                 .item_card_grid{
                     width: calc(33% - 20px);
                 }
             }
-            
+
             @media screen and (max-width: 768px) {
                 .item_card_grid{
                     width: calc(50% - 10px);
                 }
             }
-            
-            
+
+
