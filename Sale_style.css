@@ -50,10 +50,11 @@
             }
             .top_filters{
                 position: sticky;
-                top: 57px;
+                top: 56px;
                 height: 160px;
                 padding-top: 40px;
                 background-color: rgba(243,247,250,.97);
+                z-index: 10;
             }
             .input_wrapper{
                 position: absolute;

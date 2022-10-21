@@ -48,6 +48,7 @@
                 align-items: center;
                 background-color: white;
                 padding: 8px 12px;
+                z-index: 15;
             }
 
             .navbar__logo {
@@ -68,6 +69,7 @@
 
             .navbar__menu li {
                 padding: 8px 12px;
+                z-index: 15;
             }
             
             .navbar__menu li:hover {
@@ -86,6 +88,7 @@
                 right: 32px;
                 font-size: 24px;
                 cursor: pointer;
+                z-index: 15;
             }
 
             .intro_bg{ /* intro 배경화면 설정 */
@@ -179,6 +182,7 @@
                     flex-direction: column;
                     align-items: flex-start;
                     padding: 8px 24px;
+                    z-index: 15;
                 }
                 .navbar__menu {
                     display: none;
@@ -192,6 +196,7 @@
                 .navbar__menu li {
                     width: 100%;
                     text-align: center;
+                    z-index: 15;
                 }
 
                 .navbar__toogleBtn{
@@ -200,5 +205,6 @@
 
                 .navbar__menu.active{
                     display: flex;
+                    z-index: 15;
                 }               
             }
