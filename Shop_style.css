@@ -304,8 +304,9 @@ body{
     text-align: center;
 }
 .image img{
-    width: 90px;
+    width: 150px;
     height: 90px;
+    object-fit: contain;
     border-radius: 5px;
     border: 1px solid;
     border-color:black;
