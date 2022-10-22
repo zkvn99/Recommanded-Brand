@@ -353,6 +353,7 @@
                 margin: 0 5px;
                 position: relative;
                 transition: 0.2s all;
+                padding-bottom: 30px;
             }
             .item_card_featured{
                 display: block;
@@ -406,6 +407,10 @@
                 text-align: right;
                 margin: 16px 0 10px;
             }
+
+            .item_card_brand_color{
+                margin-top: 15px;
+            }
             .item_brand{
                 float: left;
                 width: 100px;
@@ -417,6 +422,18 @@
             .item_card_price input{
                 display: none;
             }
+            .color_select{
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .color_select .color_switch{
+                width: 16px;
+                height: 16px;
+                margin-left: 14px;
+                margin-bottom: 0;
+                order: 2;
+            }
+
 
             @media screen and (max-width: 1600px) {
 
