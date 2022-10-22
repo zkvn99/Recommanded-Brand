@@ -1,5 +1,5 @@
-let indicator = document.querySelector('.indicator').children;
-let shop_mall = document.querySelector('.shop_mall').children;
+let indicator = document.querySelector('.indicator').children,
+shop_mall = document.querySelector('.shop_mall').children;
 
 for(let i=0; i<indicator.length; i++)
 {

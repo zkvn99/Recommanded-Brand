@@ -427,11 +427,35 @@
                 flex-wrap: wrap;
             }
             .color_select .color_switch{
+                display: none;
                 width: 16px;
                 height: 16px;
                 margin-left: 14px;
                 margin-bottom: 0;
                 order: 2;
+            }
+            .color_switch.active{
+                display: block;
+            }
+            .black{
+                background-color: black;
+            }
+            .red{
+                background-color: red;
+            }
+            .blue{
+                background-color: blue;
+            }
+            .white{
+                background-color: white;
+            }
+            .item_card_brand_color span{
+                opacity: 0.6;
+                float: right;
+                color: gray;
+            }
+            .color_count.active{
+                display: none;
             }
 
 

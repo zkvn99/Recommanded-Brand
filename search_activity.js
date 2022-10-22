@@ -1,5 +1,5 @@
-const input_wrapper = document.querySelector('.input_wrapper');
-const input_text = document.querySelector('.input_wrapper input');
+const input_wrapper = document.querySelector('.input_wrapper'),
+input_text = document.querySelector('.input_wrapper input');
 
 input_text.onfocus = function(){
     input_wrapper.classList.toggle('active');
