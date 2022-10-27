@@ -16,3 +16,15 @@ function item_filter(){
         }
     }
 }
+function item_initializer(){
+
+    var min, max, item, i;
+  
+    min = document.getElementById("input_min");
+    max = document.getElementById("input_max");
+    item = document.getElementsByClassName("item_card_grid"); // item에 브랜드 상자 받아오기
+    for(i=0;i<item.length;i++){
+            item[i].style.display = "block"; // 아이템 출력
+    }
+    max.attributes.value = 50000;
+}
