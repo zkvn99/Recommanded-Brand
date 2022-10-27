@@ -225,19 +225,22 @@
                     white-space: nowrap;
                 }
                 .intro_name h1{
+                    font-size: 20px;
                     margin-top: 20px;
                 }
                 .intro_name h2{
+                    font-size: 20px;
                     margin-top: 3px;
                 }
                 .intro_name h3{
                     margin-top: 40px;
+                    font-size: 18px;
                 }
                 .intro_name h4{
                     margin-top: 3px;
+                    font-size: 18px;
                 }
                 .intro_name h1,h2,h3,h4{
-                    font-size: 20px;
                     text-overflow: ellipsis;
                     overflow: hidden;
                     list-style: none;

@@ -402,7 +402,7 @@ body{
         display: block;
     }
     .search_box.active{
-        width: 200px;
+        width: 180px;
         float: right;
     }
 }
