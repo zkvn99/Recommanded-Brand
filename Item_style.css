@@ -89,6 +89,10 @@
                 font-family: 'BMJUA';
                 margin-left: 10px;
             }
+            .mobile_indicator{
+                display: none;
+                font-family: 'BMJUA';
+            }
             .indicator li a{
                 font-family: 'BMJUA';
             }
@@ -718,6 +722,31 @@
                     left: 60%;
                     transform: translate(-60%);
                 }
+                .search_filter input{
+                    margin-right: 10px;
+                    margin-top: 3px;
+                }
+                .search_filter::before{
+                    top: 15px;
+                }
+                .mobile_indicator{
+                    display: block;
+                }
+                .basic_indicator{
+                    display: none;
+                }
+                .mobile_category_box{
+                    width: 100px;
+                }
+                .indicator.active{
+                    width: 90px;
+                }
+                .price_container{
+                    max-width: 400px;
+                }
+                .wrapping_price{
+                    max-width: 350px;
+                }
             }
 
             @media screen and (max-width: 617px) {
@@ -748,4 +777,8 @@
                 }
             }
 
-
+            @media screen and (max-width: 426px) {
+                .search_filter{
+                    margin-top: 80px;
+                }
+            }
