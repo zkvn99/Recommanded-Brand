@@ -1,9 +1,10 @@
 function filter(){
 
-    var value, title, shop, item, i;
+    var value, title, shop, item, i, grid;
   
-    value = document.getElementById("value").value.toUpperCase(); // value에 검색 value 받아오기 대문자로
+    value = document.getElementById("value_search").value.toUpperCase(); // value에 검색 value 받아오기 대문자로
     item = document.getElementsByClassName("item_card_grid"); // item에 브랜드 상자 받아오기
+    grid = document.getElementsByClassName("item_content_wrapper")
   
     for(i=0;i<item.length;i++){ // item 길이만큼 증가
       title = item[i].getElementsByClassName("item_card_details"); // 타이틀 받아오기
@@ -14,5 +15,4 @@ function filter(){
         item[i].style.display = "none"; // 아이템 미출력
       }
     }
-  }
-  
+}

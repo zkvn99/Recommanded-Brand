@@ -17,19 +17,19 @@
 
 <body>
     <div class="header">
-        <h1 class="head_name"><a href="Home.html">나만 알고 싶은 브랜드</a></h1>
+        <h1 class="head_name"><a href="index.html">나만 알고 싶은 브랜드</a></h1>
     </div>
 
     <nav class="navbar">
         <div class="navbar__logo">
-            <a href="Home.html">나만 알고 싶은 브랜드</a>
+            <a href="index.html">나만 알고 싶은 브랜드</a>
             <a href="javascript:void(0);" class="navbar__toogleBtn">
                 <i class="fa-solid fa-bars"></i>
             </a>
         </div>
 
         <ul class="navbar__menu">
-            <li><a href="Home.html">HOME</a></li>
+            <li><a href="index.html">HOME</a></li>
             <li><a href="Shop.html">SHOP</a></li>
             <li><a href="Sale.html">SALE</a></li>
             <li><a href="Item.html">ITEM</a></li>
@@ -68,9 +68,14 @@
                                                     스타일 카테고리
                                                 </span>
                                             </section>
+                                            <section class="mobile_category_box">
+                                                <span>
+                                                    스타일 카테고리
+                                                </span>
+                                            </section>
                                         </section><!-- 카테고리 기능 구현-->
                                         <div class="search_filter">
-                                            <input onkeyup="filter()" type="text" id="value" placeholder="아이템 검색">
+                                            <input onkeyup="filter()" type="text" id="value_search" placeholder="아이템 검색">
                                         </div> <!-- 검색 기능 구현-->
                                         <div class="price_onclick">
                                             <span>
@@ -82,15 +87,15 @@
                                                 <div class="input_price">
                                                     <i class="fas fa-times"></i>
                                                     <div class="field">
-                                                        <span>Min</span>
+                                                        <span>최소 금액</span>
                                                         <input type="number" id="input_min" class="input-min"
                                                             id="input-min" value="0">
                                                     </div>
                                                     <div class="separator">-</div>
                                                     <div class="field">
-                                                        <span>Max</span>
+                                                        <span>최대 금액</span>
                                                         <input type="number" id="input_max" class="input-max"
-                                                            value="5000000">
+                                                            value="1000000">
                                                     </div>
                                                 </div>
                                                 <div class="slider">
@@ -98,12 +103,14 @@
                                                 </div>
                                                 <div class="range_input">
                                                     <input type="range" id="range_min" class="range-min" min="0"
-                                                        max="5000000" value="0" step="1000">
-                                                    <input type="range" class="range-max" min="5000" max="5000000"
-                                                        value="5000000" step="1000">
+                                                        max="1000000" value="0" step="1000">
+                                                    <input type="range" id="range_max" class="range-max" min="5000"
+                                                        max="1000000" value="1000000" step="1000">
                                                 </div>
-                                                <input type="button" class="price_filter_Btn" value="적용" onclick="item_filter()">
-                                                <input type="button" class="price_initializer_Btn" value="초기화" onclick="item_initializer()">
+                                                <input type="button" class="price_filter_Btn" value="적용"
+                                                    onclick="item_filter()">
+                                                <input type="button" class="price_initializer_Btn" value="초기화"
+                                                    onclick="item_initializer()">
                                             </div>
                                         </section>
                                     </div>
@@ -113,91 +120,887 @@
                                     <!-- 아이템들 들어갈 곳 랩핑-->
                                     <div class="item_content_grid">
                                         <!-- 아이템 넣을 전체 격자모양-->
-                                    
-                                        <div class="item_card_grid" data-category="top" >
-                                            <!-- 아이템 격자모양 -->
-                                            <div class="item_card_featured">
-                                                <!-- 아이템 사진 넣는 부분-->
-                                                <a href="#">
-                                                    <div class="img_item">
-                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
-                                                        <img id="img1" src="image/HERITAGEFLOSS.JPG"
-                                                            onmouseover="change1()" onmouseout="change2()">
-                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
-                                                    <div class="img_item_secondary"></div>
-                                                    <!--두번째 사진 안에다가 img src 넣을 예정-->
-                                                </a>
-                                                <div class="img_relevant">new</div>
-                                            </div>
-                                            <div class="item_card_content">
-                                                <!-- 아이템 사진 설명 부분-->
-                                                <a href="#" class="item_details_title">
-                                                    <p class="item_card_details">초록색 니트</p>
-                                                    <div class="item_card_price">
-                                                        <p>120,000</p>
-                                                        <input type="number" id="input_number" class="input-number"
-                                                            value="10000">
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="item_card_brand_color">
-                                                <div class="item_brand">
-                                                    <!-- 아이템 컬러 및 브랜드 설명-->
-                                                    <p class="item_card_brand">무신사</p>
-                                                    <p class="item_card_category_none">상의</p>
-                                                </div>
-                                                <div class="color_select">
-                                                    <button class="color_switch black" role="radio"></button>
-                                                    <button class="color_switch red" role="radio"></button>
-                                                    <button class="color_switch blue" role="radio"></button>
-                                                    <button class="color_switch white" role="radio"></button>
-                                                </div>
-                                                <span class="color_count">4 color</span>
-                                            </div>
-                                        </div>
 
-                                    
                                         <div class="item_card_grid" data-category="top">
                                             <!-- 아이템 격자모양 -->
                                             <div class="item_card_featured">
                                                 <!-- 아이템 사진 넣는 부분-->
-                                                <a href="#">
+                                                <a id="item_homepage1"
+                                                    href="https://lmood.co.kr/product/%EB%AE%A4%ED%8A%B8-%EB%94%A5-%EB%B8%8C%EC%9D%B4%EB%84%A5-%EB%8B%88%ED%8A%B8-oatmeal/2530/"
+                                                    target='_blank'>
                                                     <div class="img_item">
                                                         <!--첫번째 사진 안에다가 img src 넣을 예정-->
-                                                        <img id="img2" src="image/HERITAGEFLOSS.JPG">
+                                                        <img id="img1"
+                                                            src="https://lmood.co.kr/renewal/22/FW/04/08_mute%20deep%20v-neck%20knit/OATMEAL/1-1.jpg">
                                                     </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
-                                                    <div class="img_item_secondary"></div>
-                                                    <!--두번째 사진 안에다가 img src 넣을 예정-->
                                                 </a>
-                                                <div class="img_relevant">new</div>
                                             </div>
                                             <div class="item_card_content">
                                                 <!-- 아이템 사진 설명 부분-->
                                                 <a href="#" class="item_details_title">
-                                                    <p class="item_card_details">초록색 니트</p>
+                                                    <p class="item_card_details">뮤트 딥 브이넥 니트</p>
                                                     <div class="item_card_price">
-                                                        <p>120,000</p>
+                                                        <p class="before_price">98,900</p>
+                                                        <p>89,000</p>
                                                         <input type="number" id="input_number" class="input-number"
-                                                            value="10000">
+                                                            value="89000">
                                                     </div>
                                                 </a>
                                             </div>
                                             <div class="item_card_brand_color">
                                                 <div class="item_brand">
                                                     <!-- 아이템 컬러 및 브랜드 설명-->
-                                                    <p class="item_card_brand">무신사</p>
+                                                    <p class="item_card_brand">LMOOD</p>
                                                     <p class="item_card_category_none">상의</p>
                                                 </div>
                                                 <div class="color_select">
-                                                    <button class="color_switch base black" role="radio" onclick="color_change()"></button>
-                                                    <button class="color_switch red" role="radio" onclick="color_change()"></button>
-                                                    <button class="color_switch blue" role="radio"></button>
-                                                    <button class="color_switch white" role="radio"></button>
+                                                    <button class="color_switch oatmeal" role="radio"
+                                                        onclick="changelmoodoatmeal()"></button>
+                                                    <button class="color_switch gray" role="radio"
+                                                        onclick="changelmoodgray()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changelmoodblack()"></button>
+                                                    <button class="color_switch navy" role="radio"
+                                                        onclick="changelmoodnavy()"></button>
                                                 </div>
                                                 <span class="color_count">4 color</span>
                                             </div>
                                         </div>
 
+                                        <div class="item_card_grid" data-category="outer">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepage2"
+                                                    href="https://apartfromthat-store.com/product/detail.html?product_no=1593&cate_no=81&display_group=1"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="img2"
+                                                            src="https://apartfromthat-store.com/web/product/medium/202210/b0457a4a4ec3049d2ff9b124f1877ed7.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">멜란지 로버 울 가디건</p>
+                                                    <div class="item_card_price">
+                                                        <p class="before_price">288,000</p>
+                                                        <p>273,600</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="273600">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">Years Ago</p>
+                                                    <p class="item_card_category_none">아우터</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch brown" role="radio"
+                                                        onclick="changeyearsbrown()"></button>
+                                                    <button class="color_switch pink" role="radio"
+                                                        onclick="changeyearspink()"></button>
+                                                    <button class="color_switch croton" role="radio"
+                                                        onclick="changeyearscroton()"></button>
+                                                </div>
+                                                <span class="color_count">3 color</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="item_card_grid" data-category="bottom">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepage3"
+                                                    href="http://minav.co.kr/product/detail.html?product_no=1520&cate_no=54&display_group=1"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="img3"
+                                                            src="http://minav.co.kr/web/product/small/202209/d2ace5a5e33b7f1019f89897a6ac539a.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">원턱 카운터 데님팬츠</p>
+                                                    <div class="item_card_price">
+                                                        <p class="before_price">109,000</p>
+                                                        <p class="price_after">92,650</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="92650">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">minav</p>
+                                                    <p class="item_card_category_none">바지</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changeminavblack()"></button>
+                                                    <button class="color_switch brown" role="radio"
+                                                        onclick="changeminavbrown()"></button>
+                                                    <button class="color_switch cloudblue" role="radio"
+                                                        onclick="changeminavcloudblue()"></button>
+                                                    <button class="color_switch blue2" role="radio"
+                                                        onclick="changeminavblue()"></button>
+                                                </div>
+                                                <span class="color_count">4 color</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="item_card_grid" data-category="shoes">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepage4"
+                                                    href="https://www.adidas.co.kr/%ED%8F%AC%EB%9F%BC-%EB%A1%9C%EC%9A%B0/FY7756.html"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="img4"
+                                                            src="https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/09c5ea6df1bd4be6baaaac5e003e7047_9366/White_FY7756_01_standard.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">포럼 로우</p>
+                                                    <div class="item_card_price">
+                                                        <p class="price_all">119,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="119000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">Adidas</p>
+                                                    <p class="item_card_category_none">신발</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch blue" role="radio"
+                                                        onclick="changeadidasblue()"></button>
+                                                    <button class="color_switch white" role="radio"
+                                                        onclick="changeadidaswhite()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changeadidasblack()"></button>
+                                                </div>
+                                                <span class="color_count">3 color</span>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="item_card_grid" data-category="top">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageA"
+                                                    href="https://anderssonbell.com/men/detail.html?product_no=6507&cate_no=52&display_group=1"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgA"
+                                                            src="https://anderssonbell.com/web/product/extra/big/202208/b78414c1ddb389f2130e2feab5dda722.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">바시티로고 크루넥 스웨터</p>
+                                                    <div class="item_card_price">
+                                                        <p class="price_all">225,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="225000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">Andersson Bell</p>
+                                                    <p class="item_card_category_none">상의</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch blue" role="radio"></button>
+                                                    <span class="color_count">1 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="bottom">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageB"
+                                                    href="https://anderssonbell.com/product/search_detail.html?product_no=6561&cate_no=32&display_group=1"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgB"
+                                                            src="https://anderssonbell.com/web/product/extra/big/202209/797a58e57f25eff25dbc92a91116d47a.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">지퍼 와이드레그 진</p>
+                                                    <div class="item_card_price">
+                                                        <p class="price_all">198,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="198000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">Andersson Bell</p>
+                                                    <p class="item_card_category_none">바지</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch black" role="radio"></button>
+                                                    <span class="color_count">1 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="shoes">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageC"
+                                                    href="https://m.nbkorea.com/product/productDetail.action?styleCode=NBPDBF756G&colCode=15&cIdx=1325"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgC"
+                                                            src="https://image.nbkorea.com/NBRB_Product/20220125/NB20220125183128695001.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">ML2002RO</p>
+                                                    <div class="item_card_price">
+                                                        <p class="price_all">149,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="149000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">New Balance</p>
+                                                    <p class="item_card_category_none">신발</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch gray" role="radio"></button>
+                                                    <span class="color_count">1 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="bottom">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepage5"
+                                                    href="https://gramicci.kr/product/detail.html?product_no=3675&cate_no=392&display_group=1"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="img5"
+                                                            src="https://gramicci.kr/web/product/medium/202209/0b4f112a69cfaec69632410d9cbb2e42.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">그라미치 팬츠</p>
+                                                    <div class="item_card_price">
+                                                        <p class="before_price">109,000</p>
+                                                        <p class="price_after">98,100</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="98100">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">그라미치</p>
+                                                    <p class="item_card_category_none">바지</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch olive" role="radio"
+                                                        onclick="changegramichiolive()"></button>
+                                                    <button class="color_switch tabaco" role="radio"
+                                                        onclick="changegramichitabaco()"></button>
+                                                    <button class="color_switch chino" role="radio"
+                                                        onclick="changegramichichino()"></button>
+                                                    <span class="color_count">3 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="outer">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageD"
+                                                    href="https://adererror.com/product/rivington-knit/7237/category/424/display/1/"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgD"
+                                                            src="https://adererror.com/2021fw/11.%203rd%20drop/04.%20KNITWEAR/BKAFWGD02BK_Rivington%20knit/1.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">리빙턴 니트</p>
+                                                    <div class="item_card_price">
+                                                        <p class="price_all">379,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="379000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">Adererror</p>
+                                                    <p class="item_card_category_none">아우터</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch mint" role="radio"
+                                                        onclick="changeAdererrormint()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changeAdererrorblack()"></button>
+                                                    <span class="color_count">2 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="top">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageE"
+                                                    href="http://draw-fit.com/product/oversized-zip-up-collar-turtle-neck-knit-ivory/1635/category/59/display/1/"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgE"
+                                                            src="http://draw-fit.com/web/product/big/202209/e49294828e0c7be6d91f417321c73c15.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">집업 카라 터틀넥 니트</p>
+                                                    <div class="item_card_price">
+                                                        <p class="price_all">76,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="76000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">드로우핏</p>
+                                                    <p class="item_card_category_none">상의</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch ivory" role="radio"
+                                                        onclick="changeDrawfitivory()"></button>
+                                                    <button class="color_switch darkbrown" role="radio"
+                                                        onclick="changeDrawfitdarkbrown()"></button>
+                                                    <button class="color_switch navy" role="radio"
+                                                        onclick="changeDrawfitnavy()"></button>
+                                                    <button class="color_switch gray" role="radio"
+                                                        onclick="changeDrawfitgray()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changeDrawfitblack()"></button>
+                                                    <span class="color_count">5 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="item_card_grid" data-category="bottom">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageF"
+                                                    href="https://tonywack.com/product/straight-cut-denim-jeans-faded-vintage-indigo/2043/category/118/display/1/"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgF"
+                                                            src="https://tonywack.com/web/product/extra/small/202210/89b9853a6566234b231e8794c37d22aa.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">스트레이트 데님 진</p>
+                                                    <div class="item_card_price">
+                                                        <p class="price_all">95,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="95000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">Tonywack</p>
+                                                    <p class="item_card_category_none">상의</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch vintageindigo " role="radio"
+                                                        onclick="changeTonywackvintigeindigo()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changeTonywackblack()"></button>
+                                                    <span class="color_count">2 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="item_card_grid" data-category="bottom">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageG"
+                                                    href="https://www.adlielos.com/product/%ED%94%84%EB%A0%8C%EC%B9%98-%ED%85%8C%EC%9D%B4%ED%8D%BC%EB%93%9C-%EC%8A%AC%EB%9E%99%EC%8A%A4/200/category/42/display/1/"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgG"
+                                                            src="https://www.adlielos.com/web/product/extra/small/202202/68bc1b103590705397b34a8bac2862e3.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">프렌치 테이퍼드 슬랙스</p>
+                                                    <div class="item_card_price">
+                                                        <p class="price_all">49,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="49000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">에드리엘로스</p>
+                                                    <p class="item_card_category_none">바지</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch gray" role="radio"
+                                                        onclick="changeAdlielosgray()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changeAdlielosblack()"></button>
+                                                    <span class="color_count">2 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="item_card_grid" data-category="shoes">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepage6"
+                                                    href="http://jerusalemsandalskorea.co.kr/product/no1063-michael-slide-%EB%AF%B8%EC%B9%B4%EC%97%98-%EC%8A%AC%EB%9D%BC%EC%9D%B4%EB%93%9C-tan/164/category/25/display/1/"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="img6" src="image/미카엘브라운.JPG">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">미카엘 슬라이드</p>
+                                                    <div class="item_card_price">
+                                                        <p class="before_price">109,000</p>
+                                                        <p class="price_after">98,100</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="98100">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">jerusalem sandals</p>
+                                                    <p class="item_card_category_none">신발</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch tan" role="radio"
+                                                        onclick="changeMicaTan()"></button>
+                                                    <button class="color_switch blackbrown" role="radio"
+                                                        onclick="changeMicaBrown()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changeMicaBlack()"></button>
+                                                    <span class="color_count">3 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="outer">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageH"
+                                                    href="https://www.coor.kr/product/%EC%9B%8C%ED%84%B0-%EB%A6%AC%ED%8E%A0%EB%9F%B0%ED%8A%B8-%EA%B5%AC%EC%8A%A4%EB%8B%A4%EC%9A%B4-%EC%A0%90%ED%8D%BC-%EC%9D%B8%EB%94%94%ED%95%91%ED%81%AC/1586/category/25/display/1/"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgH"
+                                                            src="https://www.coor.kr/web/upload/NNEditor/20220915/copy-1663236313-1.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">워터 리펠런트 <br>구스다운 점퍼</p>
+                                                    <div class="item_card_price">
+                                                        <p class="before_price">328,000</p>
+                                                        <p class="price_after">295,200</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="295200">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">coor</p>
+                                                    <p class="item_card_category_none">점퍼</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch indiepink" role="radio"
+                                                        onclick="changecoorindiepink()"></button>
+                                                    <button class="color_switch charcoalgray" role="radio"
+                                                        onclick="changecoorcharcoalgray()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changecoorblack()"></button>
+                                                    <span class="color_count">3 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="outer">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageI"
+                                                    href="https://nomanual-shop.com/product/detail.html?product_no=1573&cate_no=24&display_group=1"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgI"
+                                                            src="https://nomanual-shop.com/web/product/big/202208/3756d415ad2f2a7fbbe760996778f62e.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">싱글 코트</p>
+                                                    <div class="item_card_price">
+                                                        <p class="price_all">419,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="419000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">nomanual</p>
+                                                    <p class="item_card_category_none">코트</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch oatmeal_b" role="radio"
+                                                        onclick="changen_moatmeal()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changen_mblack()"></button>
+                                                    <span class="color_count">2 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="outer">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepage7"
+                                                    href="http://insilence.co.kr/product/detail.html?product_no=2944&cate_no=203&display_group=1"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="img7"
+                                                            src="https://ambient.diskn.com/detailimg/22FW/MEN/Coat/IM2B4CT04/black/000313.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">오버사이즈 발마칸 코트</p>
+                                                    <div class="item_card_price">
+                                                        <p class="before_price">377,000</p>
+                                                        <p class="price_after">339,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="339000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">INSILENCE</p>
+                                                    <p class="item_card_category_none">코트</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changen_Inblack()"></button>
+                                                    <button class="color_switch beige" role="radio"
+                                                        onclick="changen_InBeige()"></button>
+                                                    <button class="color_switch grayBeige" role="radio"
+                                                        onclick="changen_InGrayBeige()"></button>
+                                                    <button class="color_switch darknavybeige" role="radio"
+                                                        onclick="changen_InDarkNavyBeige()"></button>
+                                                    <span class="color_count">4 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="shoes">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageJ"
+                                                    href="http://romanticmove.com/product/detail.html?product_no=7048&cate_no=731&display_group=1"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgJ"
+                                                            src="http://romanticmove.com/web/product/extra/big/20200303/5cb73b926c9bfe4ed4b61d2391af15de.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">뉴 클래식 더비</p>
+                                                    <div class="item_card_price">
+                                                        <p class="before_price">168,000</p>
+                                                        <p class="price_after">134,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="134000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">ROMANTIC MOVE</p>
+                                                    <p class="item_card_category_none">신발</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch black" role="radio"></button>
+                                                    <span class="color_count">1 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="top">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageK"
+                                                    href="https://shinsegaemall.ssg.com/item/itemView.ssg?itemId=1000518595250&siteNo=6004&salestrNo=6005"
+                                                    target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgK"
+                                                            src="https://sitem.ssgcdn.com/50/52/59/item/1000518595250_i1_1200.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">디파트먼트 롱슬리브</p>
+                                                    <div class="item_card_price">
+                                                        <p class="before_price">642,000</p>
+                                                        <p class="price_after">496,587</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="496587">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">GALLERY DEPT.</p>
+                                                    <p class="item_card_category_none">상의</p>
+                                                </div>
+                                                <div class="color_select">
+                                                    <button class="color_switch white" role="radio"
+                                                        onclick="changegallerycream()"></button>
+                                                    <button class="color_switch yellow" role="radio"
+                                                        onclick="changegalleryyellow()"></button>
+                                                    <button class="color_switch black" role="radio"
+                                                        onclick="changegalleryblack()"></button>
+                                                    <span class="color_count">3 color</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="item_card_grid" data-category="top" >
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageL" href="https://mmic.kr/product/%ED%81%B4%EB%9F%BD-%EB%B9%84%EB%84%88%EC%8A%A4-%EC%98%A4%EB%B2%84%ED%95%8F-%ED%9B%84%EB%93%9C%ED%8B%B0%EC%85%94%EC%B8%A0-%EA%B7%B8%EB%A0%88%EC%9D%B4/1712/category/246/display/1/" target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgL" src="https://mmic.kr/web/product/medium/202208/d28c07e6ba60984f564e4d8d2efb6927.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">클럽 비너스 오버핏 후드티</p>
+                                                    <div class="item_card_price">
+                                                         <p class="price_all">109,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="109000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">MMIC</p>
+                                                    <p class="item_card_category_none">상의</p>
+                                                </div>
+                                                <div class="color_select">	
+                                            <button class="color_switch gray" role="radio" onclick="changeMMICgray()"></button>
+                                                 <button class="color_switch black" role="radio" onclick="changeMMICblack()"></button>
+                                            <span class="color_count">3 color</span>      
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="top" >
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageN" href="https://www.covernat.net/product/%EC%98%A4%EB%B2%84%ED%95%8F-%ED%94%84%EB%A0%88%ED%94%BC-%EA%B8%B0%EB%AA%A8-%ED%8A%B8%EC%9C%8C-%EC%85%94%EC%B8%A0-%EC%95%84%EC%9D%B4%EB%B3%B4%EB%A6%AC/5042/category/24/display/1/" target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgN" src="https://www.covernat.net/web/product/big/202210/d43192c2c6bd53a8696d4006f64b0e9a.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">오버핏 프레피 기모<br> 트윌 셔츠</p>
+                                                    <div class="item_card_price">
+                                                         <p class="before_price">89,000</p>
+                                                         <p class="price_after">80,100</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="80100">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">covernat</p>
+                                                    <p class="item_card_category_none">상의</p>
+                                                </div>
+                                                <div class="color_select">	
+                                            <button class="color_switch ivory" role="radio" onclick="changec_nivory()"></button>
+                                                 <button class="color_switch black" role="radio" onclick="changec_nblack()"></button>
+                                            <span class="color_count">2 color</span>      
+                                            </div>
+                                        </div>
+                                        </div>
+
+                                        <div class="item_card_grid" data-category="shoes">
+                                            <!-- 아이템 격자모양 -->
+                                            <div class="item_card_featured">
+                                                <!-- 아이템 사진 넣는 부분-->
+                                                <a id="item_homepageM" href="https://anderssonbell.com/men/detail.html?product_no=6569&cate_no=57&display_group=1" target='_blank'>
+                                                    <div class="img_item">
+                                                        <!--첫번째 사진 안에다가 img src 넣을 예정-->
+                                                        <img id="imgM" src="https://anderssonbell.com/web/product/big/202208/51aad9e514fe3b893097157a6bdf367e.jpg">
+                                                    </div> <!-- 자바스크립트로 컬러별 이미지 바꾸기-->
+                                                </a>
+                                            </div>
+                                            <div class="item_card_content">
+                                                <!-- 아이템 사진 설명 부분-->
+                                                <a href="#" class="item_details_title">
+                                                    <p class="item_card_details">스퀘어 더비 슈즈</p>
+                                                    <div class="item_card_price">
+                                                         <p class="price_all">329,000</p>
+                                                        <input type="number" id="input_number" class="input-number"
+                                                            value="329000">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="item_card_brand_color">
+                                                <div class="item_brand">
+                                                    <!-- 아이템 컬러 및 브랜드 설명-->
+                                                    <p class="item_card_brand">Andersson Bell</p>
+                                                    <p class="item_card_category_none">신발</p>
+                                                </div>
+                                                <div class="color_select">	
+                                            <button class="color_switch white" role="radio" onclick="changeAnderssonwhite()"></button>
+                                                 <button class="color_switch rightbrown" role="radio" onclick="changeAnderssonbrown()"></button>
+                                                 <button class="color_switch black" role="radio" onclick="changeAnderssonblack()"></button>
+                                            <span class="color_count">3 color</span>      
+                                            </div>
+                                        </div>
+                                        </div>
 
                                     </div>
                                 </div>
@@ -218,6 +1021,7 @@
     <script src="Item_search.js"></script>
     <script src="item_price_filter.js"></script>
     <script src="item_price_array.js"></script>
+    <script src="categoryevent.js"></script>
 </body>
 
 </html>

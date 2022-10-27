@@ -304,6 +304,7 @@ body{
     text-align: center;
 }
 .image img{
+    width: 100%;
     max-width: 210px;
     height: 90px;
     object-fit: contain;

@@ -36,6 +36,15 @@
             div{
                 display:block;
             }
+            .h2{
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            p{
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
             .content_wrapper_sale{
                 display: block;
                 margin: 0 auto;
@@ -177,6 +186,9 @@
                 font-family: 'ONE-Mobile-POP';
                 font-size: 15px;
                 color: #000000;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
             }
             .term{
                 font-family: 'HallymGothic-Regular';

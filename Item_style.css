@@ -7,6 +7,12 @@
                 padding:0px;
                 color:#000;
             }
+            @font-face {
+                font-family: 'BMJUA';
+                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
+                font-weight: normal;
+                font-style: normal;
+            }            
             div{
                 display: block;
             }
@@ -15,6 +21,12 @@
             }
             body{
                 background-color: #f3f7fa;;
+            }
+            input{
+                font-family: 'BMJUA';
+            }
+            span{
+                font-family: 'BMJUA';
             }
             .layout_item{
                 position: relative;
@@ -39,14 +51,17 @@
                 height: 100%;
             }
             .top_filters{
+                max-width: 1140px;
                 position: sticky;
-                top: 55px;
+                top: 50px;
                 height: 160px;
                 padding-top: 40px;
                 z-index: 3;
-                background-color: rgba(191, 220, 243, 0.97);
+                background-color: #f3f7fa;
             }
             .filter_box{
+                width: 100%;
+                height: 100%;
                 padding: 20px 0 0;
             }
 
@@ -61,8 +76,8 @@
             }
             .indicator{
                 position: absolute;
-                width: 180px;
-                top: 30px;
+                width: 140px;
+                top: 20px;
                 z-index: 1;
                 background-color: rgb(255, 255, 255);
                 display: none;
@@ -72,6 +87,7 @@
                 padding-bottom: 20px;
                 border: 1px solid #c1c2c2;
                 font-family: 'BMJUA';
+                margin-left: 10px;
             }
             .indicator li a{
                 font-family: 'BMJUA';
@@ -80,15 +96,15 @@
                 display: block;
             }
             .indicator.active li a:hover {
-                color: rgb(13, 114, 63);
+                color: rgb(166, 168, 167);
                 border-radius: 4px;
             }
             .indicator.active::after{
                 content: "";
                 display: block;
                 position: absolute;
-                top: 5%;
-                transform: translateY(-5%);
+                top: 7%;
+                transform: translateY(-7%);
                 right: 14px;
                 background-image: url(image/up.png);
                 background-size: cover;
@@ -98,16 +114,17 @@
             .category_box{
                 position: relative;
                 display: block;
-                width: 190px;
+                width: 150px;
                 height: 40px;
                 background-color: rgb(255, 255, 255);
                 border: 1px solid #c1c2c2;
                 border-radius: 1px;
                 float: left;
                 cursor: pointer;
-                margin-top: 30px;
+                margin-top: 20px;
                 text-align: center;
                 padding-right: 30px;
+                margin-left: 10px;
             }
             .category_box::after{
                     content: "";
@@ -127,6 +144,42 @@
                 line-height: 39px;
             }
             .category_box.active{
+                display: none;
+            }
+
+            .mobile_category_box{
+                position: relative;
+                display: none;
+                width: 150px;
+                height: 40px;
+                background-color: rgb(255, 255, 255);
+                border: 1px solid #c1c2c2;
+                border-radius: 1px;
+                float: left;
+                cursor: pointer;
+                margin-top: 20px;
+                text-align: center;
+                padding-right: 30px;
+                margin-left: 10px;
+            }
+            .mobile_category_box::after{
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    right: 14px;
+                    background-image: url(image/bottom.png);
+                    background-size: cover;
+                    width: 15px;
+                    height: 15px;
+            }
+            .mobile_category_box span{
+                font-size: 18px;
+                font-family: 'BMJUA';
+                line-height: 39px;
+            }
+            .mobile_category_box.active{
                 display: none;
             }
             /* 카테고리 부분 --------------------------- */
@@ -153,15 +206,17 @@
                 border: 1px solid;
                 width: 140px;
                 height: 32px;
-                background-color: #ebeef0;
+                background-color: #ffffff;
                 line-height: 32px;
                 cursor: pointer;
                 text-indent:40px;
                 font: inherit;
+                font-family: 'HallymGothic-Regular';
                 color: inherit;
             }
             input::placeholder{
                 color: gray;
+                font-family: 'HallymGothic-Regular';
             }
             .search_filter.active input::placeholder{
                 color: #CCD3D9;
@@ -183,11 +238,12 @@
             .price_onclick{
                 position: absolute;
                 right: 5px;
-                top: 110px;
-                background-color: red;
+                top: 84px;
+                background-color: white;
                 width: 100px;
                 height: 30px;
                 text-align: center;
+                border: 1px solid #c1c2c2;
             }
             .price_onclick span{
                 font-size: 18px;
@@ -201,31 +257,32 @@
             .price_container{
                 display: none;
                 position: absolute;
-                padding-top: 30px;
                 text-align: right;
-                background-color: blue;
+                background-color: rgb(206, 206, 245);
                 right: 10px;
                 top: 100px;
+                margin-top: 30px;
             }
             .price_container i{
                 width: 30px;
                 font-size: 25px;
                 position: absolute;
-                background-color: red;
                 cursor: pointer;
-                right: 15px;
-                top: 20px;
+                right: 20px;
+                top: 15px;
+                z-index: 100;
             }
             .price_container.active{
                 display: block;
-                padding-top: 30px;
+                border-radius: 10px;
                 text-align: right;
             }
             .wrapping_price{
                 width: 400px;
-                background-color: blue;
+                background-color: rgb(255, 255, 255);
                 border-radius: 10px;
                 padding: 20px 25px 40px;
+                height: 130px;
             }
             .input_price{
                 width: 100%;
@@ -265,14 +322,14 @@
             .slider{
                 height: 5px;
                 border-radius: 5px;
-                background-color: black;
+                background-color: rgb(204,211,217);
                 position: relative;
             }
             .slider .progress{
                 height: 5px;
                 position: absolute;
                 border-radius: 5px;
-                background-color: aqua;
+                background: rgb(56, 55, 55);
                 left: 0px;
                 right: 0px;
             }
@@ -295,7 +352,7 @@
                 border-radius: 50%;
                 pointer-events: auto;
                 -webkit-appearance: none;
-                background-color: aqua;
+                background: rgb(56, 55, 55);
             }
             input[type="range"]::-moz-range-thumb{
                 height: 17px;
@@ -304,14 +361,29 @@
                 border-radius: 50%;
                 pointer-events: auto;
                 -moz-appearance: none;
-                background: aqua;
+                background: rgb(56, 55, 55);
             }
             .price_filter_Btn{
                 position: absolute;
                 width: 50px;
                 bottom: 10px;
-                right: 50px;
+                right: 150px;
+                height: 19px;
                 cursor: pointer;
+                background-color: white;
+                border-radius: 5px;
+                border: 1px solid black;
+            }
+            .price_initializer_Btn{
+                position: absolute;
+                width: 50px;
+                bottom: 10px;
+                left: 150px;
+                height: 19px;
+                cursor: pointer;
+                background-color: white;
+                border-radius: 5px;
+                border: 1px solid black;
             }
 
             /* 가격 필터 부분 -------------------------- */
@@ -352,10 +424,12 @@
             }
             .item_card_grid{
                 width: calc(25% - 20px);
-                margin: 0 5px;
+                max-height: 484px;
+                margin: 5px 5px;
                 position: relative;
                 transition: 0.2s all;
                 padding-bottom: 30px;
+                background-color: white;
             }
             .item_card_featured{
                 display: block;
@@ -392,7 +466,8 @@
             .item_card_content{
                 position: relative;
                 padding: 16px;
-                background-color: red;
+                background-color: rgb(255, 255, 255);
+                height: 50px;
             }
             .item_details_title{
                 display: flex;
@@ -401,13 +476,32 @@
             }
             .item_details_title .item_card_details{
                 width: calc(100% - 80px);
-                margin: 16px 0 0;
+                margin: 28px 0 0;
+                font-family: 'BMJUA';
+                text-overflow: ellipsis;
+                overflow: hidden;
+                max-height: 32px;
+            }
+            .item_card_details{
+                word-wrap: break-word;
             }
             .item_card_price{
                 width: 80px;
                 flex-direction: column;
                 text-align: right;
-                margin: 16px 0 10px;
+                margin: 16px 0 16px;
+                line-height: 16px;
+            }
+            .before_price{
+                text-decoration: line-through;
+                opacity: 0.45;
+                top:1px;
+            }
+            .price_all{
+                margin-top: 10px;
+            }
+            .price_after{
+                margin-bottom: 5px;
             }
 
             .item_card_brand_color{
@@ -415,8 +509,12 @@
             }
             .item_brand{
                 float: left;
-                width: 100px;
                 padding-left: 20px;
+            }
+            .item_card_brand{
+                color:rgb(48, 48, 48);
+                font-family: 'BMJUA';
+                margin-top: 5px
             }
             .item_card_category_none{
                 display: none;
@@ -427,6 +525,9 @@
             .color_select{
                 display: flex;
                 flex-wrap: wrap;
+                float: right;
+                margin-top: 5px;
+                margin-right: 10px;
             }
             .color_select .color_switch{
                 display: none; 
@@ -438,40 +539,41 @@
                 vertical-align: top;
             }
             .color_select.active .color_switch{
-                display: inline-block;
+                display: block;
             }
             .color_switch{
                 border-radius: 50px;
                 cursor: pointer;
                 outline: none;
             }
-            .color_switch::after{
-                display: none;
-                width: 16px;
-                height: 16px;
-                content: ' ';
-                position: absolute;
-                border: 4px solid #d1d1d1;
-                border-radius: 50%;
-                top: -5px;
-                left: -5px;
-            }
-            .base::after{
-                display: block;
-            }
-            .color_switch.active::after{
-                display: block;
-            }
-            .color_switch.active .base::after{
-                display: none;
-            }
+
             .black{
                 background-color: black;
                 border: 1px solid black;
             }
+            .oatmeal{
+                background-color: rgb(245,238,193);
+                border: 1px solid rgb(245,238,193);
+            }
+            .oatmeal_b{
+                background-color: rgb(206,201,193);
+                border: 1px solid rgb(206,201,193);
+            }
+            .gray{
+                background-color: gray;
+                border: 1px solid gray;
+            }
+            .navy{
+                background-color: rgb(0,0,128);
+                border: 1px solid rgb(0,0,128);
+            }
             .red{
                 background-color: red;
                 border: 1px solid red;
+            }
+            .tabaco{
+                background-color: rgb(108,70,59);
+                border: 1px solid rgb(108,70,59);
             }
             .blue{
                 background-color: blue;
@@ -480,6 +582,90 @@
             .white{
                 background-color: white;
                 border: 1px solid black;
+            }
+            .ivory{
+                background-color: rgb(244,240,236);
+                border: 1px solid rgb(244,240,236);
+            }
+            .yellow{
+                background-color: yellow;
+                border: 1px solid yellow;
+            }
+            .brown{
+                background-color: rgb(52,43,39);
+                border: 1px solid rgb(52,43,39);
+            }
+            .rightbrown{
+                background-color: rgb(148,104,67);
+                border: 1px solid rgb(148,104,67);
+            }
+            .darkbrown{
+                background-color: rgb(107,85,69);
+                border: 1px solid rgb(107,85,69);
+            }
+            .blackbrown{
+                background-color: rgb(57,47,52);
+                border: 1px solid rgb(57,47,52);
+            }
+            .beige{
+                background-color: rgb(155,137,113);
+                border: 1px solid rgb(155,137,113);
+            }
+            .grayBeige{
+                background-color: rgb(93,84,75);
+                border: 1px solid rgb(93,84,75);
+            }
+            .pink{
+                background-color: pink;
+                border: 1px solid pink;
+            }
+            .croton{
+                background-color: rgb(102,128,88);
+                border: 1px solid rgb(102,128,88);
+            }
+            .cloudblue{
+                background-color: rgb(67,94,118);
+                border: 1px solid rgb(67,94,118);
+            }
+            .blue2{
+                background-color: rgb(31,36,46);
+                border: 1px solid rgb(31,36,46);
+            }
+            .olive{
+                background-color: olive;
+                border: 1px solid olive;
+            }
+            .mint{
+                background-color: rgb(2,182,186);
+                border: 1px solid rgb(2,182,186);
+            }
+            .chino{
+                background-color: rgb(193,165,125);
+                border: 1px solid rgb(193,165,125);
+            }
+            .navy{
+                background-color: rgb(31,35,46);
+                border: 1px solid rgb(31,35,46);
+            }
+            .tan{
+                background-color: rgb(201,131,97);
+                border: 1px solid rgb(201,131,97);
+            }
+            .vintageindigo{
+                background-color: rgb(151,169,187);
+                border: 1px solid rgb(151,169,187);
+            }
+            .indiepink{
+                background-color: rgb(204,165,159);
+                border: 1px solid rgb(204,165,159);
+            }
+            .charcoalgray{
+                background-color: rgb(61,63,64);
+                border: 1px solid rgb(61,63,64);
+            }
+            .darknavybeige{
+                background-color: rgb(25,24,30);
+                border: 1px solid rgb(25,24,30);
             }
             .item_card_brand_color span{
                 opacity: 0.6;
@@ -492,7 +678,6 @@
 
 
             @media screen and (max-width: 1600px) {
-
             }
 
             @media screen and (max-width: 1450px) {
@@ -503,11 +688,63 @@
                 .item_card_grid{
                     width: calc(33% - 20px);
                 }
+                .top_filters{
+                    max-width: 920px;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                .item_content_grid{
+                    margin-left: 70px;
+                }
+                .item_card_grid{
+                    width: calc(50% - 80px);
+                }
+                .category_box{
+                    display: none;
+                }
+                .mobile_category_box{
+                    display: block;
+                }
+                .color_select{
+                    float: right;
+                }
+                .color_select .color_switch{
+                    display: block;
+                }
+                .color_count{
+                    display: none;
+                }
+                .search_filter{
+                    left: 60%;
+                    transform: translate(-60%);
+                }
             }
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 617px) {
+                .item_content_grid{
+                    margin-left: 0px;
+                }
                 .item_card_grid{
                     width: calc(50% - 10px);
+                }
+                .category_box{
+                    display: none;
+                }
+                .mobile_category_box{
+                    display: block;
+                }
+                .color_select{
+                    float: right;
+                }
+                .color_select .color_switch{
+                    display: block;
+                }
+                .color_count{
+                    display: none;
+                }
+                .search_filter{
+                    left: 60%;
+                    transform: translate(-60%);
                 }
             }
 

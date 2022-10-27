@@ -9,7 +9,7 @@ priceInput.forEach(input =>{
         let minVal = parseInt(priceInput[0].value),
         maxVal = parseInt(priceInput[1].value);
 
-        if((maxVal - minVal >= priceGap) && maxVal <= 10000){
+        if((maxVal - minVal >= priceGap) && maxVal <= 1000000){
             if(e.target.className === "input-min"){
                 rangeInput[0].value = minVal;
                 progress.style.left = (minVal / rangeInput[0].max) * 100 + "%";
