@@ -8,7 +8,7 @@ function item_filter(){
     arr = document.getElementsByClassName("input-number");
     for(i=0;i<item.length;i++){
         price = Number(arr[i].value);
-        if(((min.value <= price) && (price <= max.value)) && (item[i].style.display == "block")){ // 가격 체크 후
+        if(((min.value <= price) && (price <= max.value))){ // 가격 체크 후
             item[i].style.display = "block"; // 아이템 출력
         }
         else{
