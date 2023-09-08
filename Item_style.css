@@ -1,5 +1,5 @@
             *{
-                font-family: 'Poppins','Gugi', cursive;
+                font-family: 'Pretendard-Regular';
                 list-style: none;
                 text-decoration: none;
                 border-collapse: collapse;
@@ -8,11 +8,11 @@
                 color:#000;
             }
             @font-face {
-                font-family: 'BMJUA';
-                src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');
-                font-weight: normal;
+                font-family: 'Pretendard-Regular';
+                src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+                font-weight: 400;
                 font-style: normal;
-            }            
+            }   
             div{
                 display: block;
             }
@@ -21,12 +21,6 @@
             }
             body{
                 background-color: #f3f7fa;;
-            }
-            input{
-                font-family: 'BMJUA';
-            }
-            span{
-                font-family: 'BMJUA';
             }
             .layout_item{
                 position: relative;
@@ -86,16 +80,12 @@
                 padding-top: 30px;
                 padding-bottom: 20px;
                 border: 1px solid #c1c2c2;
-                font-family: 'BMJUA';
                 margin-left: 10px;
             }
             .mobile_indicator{
                 display: none;
-                font-family: 'BMJUA';
             }
-            .indicator li a{
-                font-family: 'BMJUA';
-            }
+
             .indicator.active{
                 display: block;
             }
@@ -143,8 +133,7 @@
                     height: 15px;
             }
             .category_box span{
-                font-size: 18px;
-                font-family: 'BMJUA';
+                font-size: 16px;
                 line-height: 39px;
             }
             .category_box.active{
@@ -180,7 +169,6 @@
             }
             .mobile_category_box span{
                 font-size: 18px;
-                font-family: 'BMJUA';
                 line-height: 39px;
             }
             .mobile_category_box.active{
@@ -250,8 +238,7 @@
                 border: 1px solid #c1c2c2;
             }
             .price_onclick span{
-                font-size: 18px;
-                font-family: 'BMJUA';
+                font-size: 16px;
                 line-height: 30px;
                 cursor: pointer;
             }
@@ -481,7 +468,6 @@
             .item_details_title .item_card_details{
                 width: calc(100% - 80px);
                 margin: 28px 0 0;
-                font-family: 'BMJUA';
                 text-overflow: ellipsis;
                 overflow: hidden;
                 max-height: 32px;
@@ -517,7 +503,6 @@
             }
             .item_card_brand{
                 color:rgb(48, 48, 48);
-                font-family: 'BMJUA';
                 margin-top: 5px
             }
             .item_card_category_none{
