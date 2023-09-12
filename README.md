@@ -21,5 +21,6 @@ URL : https://preparedbrand.netlify.app/
 <img width="812" alt="스크린샷 2023-09-12 오후 11 15 34" src="https://github.com/zkvn99/recommanded-brand/assets/56884540/4051170a-e1b8-44ee-b7b5-a47344341e6d">
 
 상품 추천
-<img width="1582" alt="스크린샷 2023-09-12 오후 11 14 26" src="https://github.com/zkvn99/recommanded-brand/assets/56884540/25988b61-1703-432e-8c27-49760bdfc869">
-<img width="812" alt="스크린샷 2023-09-12 오후 11 14 45" src="https://github.com/zkvn99/recommanded-brand/assets/56884540/6c5e3f9c-ed8f-4a5d-a77b-20606ac9c85e">
+<img width="1582" alt="스크린샷 2023-09-12 오후 10 55 49" src="https://github.com/zkvn99/recommanded-brand/assets/56884540/d2d471cc-dcb3-46f2-8a18-5e3f180dca8d">
+<img width="797" alt="스크린샷 2023-09-12 오후 11 17 11" src="https://github.com/zkvn99/recommanded-brand/assets/56884540/5fbf6b77-bfd9-470e-9d5b-5c2cd2db2d8a">
+
